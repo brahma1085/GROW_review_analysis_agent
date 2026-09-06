@@ -1108,11 +1108,12 @@ app:
   play_store_url: "https://play.google.com/store/apps/details?id=com.nextbillion.groww&hl=en_IN"
 
 collection:
-  max_reviews: 500
+  max_reviews: 50
   min_review_threshold: 10
+  min_word_count: 10
   reporting_period_days: 7
   historical_comparison_periods: 1
-  pagination_limit: 100
+  pagination_limit: 50
 
 analysis:
   llm_model: "opengpt-oss-120b"

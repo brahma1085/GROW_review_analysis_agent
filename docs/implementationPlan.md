@@ -258,7 +258,7 @@ Matching [problemStatement.md § 6](file:///d:/GenAI/Practice/Pranju/GROW_review
 
 #### 1.5 Implement Configuration Models (`src/models/config.py`)
 - `AppConfig` — name, package_id, store, play_store_url.
-- `CollectionConfig` — max_reviews, min_review_threshold, reporting_period_days, historical_comparison_periods, pagination_limit.
+- `CollectionConfig` — max_reviews, min_review_threshold, min_word_count, reporting_period_days, historical_comparison_periods, pagination_limit.
 - `AnalysisConfig` — llm_model, llm_temperature, batch_size, max_retries, retry_backoff_seconds, custom_categories.
 - `PriorityConfig` — weights (dict), thresholds (dict).
 - `DeduplicationConfig` — exact_match, near_duplicate_threshold.
@@ -282,7 +282,7 @@ Full configuration file with sensible defaults as defined in [architecture.md §
 1. **`config.yaml` (Base Defaults & Structure)**  
    Safely committed to version control. Defines the default behavior of the agent across all environments. Sensitive keys (like `api_key`) should be left blank.
    - **App Settings**: `app.name`, `app.package_id`, `app.play_store_url`
-   - **Collection**: `collection.max_reviews`, `collection.min_review_threshold`, `collection.reporting_period_days`, `collection.historical_comparison_periods`
+   - **Collection**: `collection.max_reviews`, `collection.min_review_threshold`, `collection.min_word_count`, `collection.reporting_period_days`, `collection.historical_comparison_periods`
    - **Analysis**: `analysis.llm_model`, `analysis.llm_temperature`, `analysis.batch_size`, `analysis.sentiment_labels`, `analysis.custom_categories`
    - **Priority & Deduplication**: Weights, thresholds, and exact/near matching configs.
    - **Storage & Logging**: `storage.data_dir`, `logging.level`, `logging.format`
