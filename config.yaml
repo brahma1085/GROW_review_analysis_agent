@@ -1,0 +1,74 @@
+app:
+  name: "Groww"
+  package_id: "com.nextbillion.groww"
+  store: "google_play"
+  play_store_url: "https://play.google.com/store/apps/details?id=com.nextbillion.groww&hl=en_IN"
+
+collection:
+  max_reviews: 500
+  min_review_threshold: 10
+  reporting_period_days: 7
+  historical_comparison_periods: 1
+  pagination_limit: 100
+
+analysis:
+  llm_model: "openai/gpt-oss-120b"
+  llm_temperature: 0.2
+  batch_size: 30
+  max_retries: 3
+  retry_backoff_seconds: 2
+  sentiment_labels:
+    - positive
+    - neutral
+    - negative
+    - mixed
+  custom_categories: []
+
+priority:
+  weights:
+    frequency: 0.20
+    negative_sentiment: 0.20
+    severity_language: 0.15
+    recency: 0.10
+    growth: 0.15
+    breadth: 0.10
+    business_impact: 0.10
+  thresholds:
+    critical: 0.85
+    high: 0.65
+    medium: 0.40
+    low: 0.0
+
+deduplication:
+  exact_match: true
+  near_duplicate_threshold: 0.85
+
+delivery:
+  google_docs:
+    mode: "append"
+    document_id: ""
+    separator: "--- WEEK SEPARATOR ---"
+  gmail:
+    create_draft: true
+    auto_send: false
+    recipients: []
+  mcp:
+    server_url: "https://mymcpserver-production-131e.up.railway.app/sse"
+    api_key: ""
+
+storage:
+  backend: "json_file"
+  data_dir: "./data"
+
+logging:
+  level: "INFO"
+  format: "json"
+  sanitize_pii: true
+
+scheduling:
+  enabled: false
+  cron_expression: "0 8 * * 1"
+
+frontend:
+  api_base_url: "http://localhost:8000"
+  dashboard_theme: "vibrant_fintech_core"

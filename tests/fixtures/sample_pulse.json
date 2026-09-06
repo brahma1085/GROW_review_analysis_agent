@@ -1,0 +1,715 @@
+{
+  "period_start": "2026-09-02 19:37:30.449219",
+  "period_end": "2026-09-05 19:37:30.449219",
+  "executive_summary": {
+    "bullets": [
+      "App launch failures affect ~6.7% of reviews, flagged as high severity, posing an immediate risk to user retention.",
+      "Usability problems introduced by the latest update are also reported by ~6.7% of users, creating friction that could lead to churn.",
+      "Nearly half of all feedback (46.7%) is broadly positive, especially praising the investment and trading capabilities, indicating strong core product health.",
+      "UI/UX design complaints and concerns over high brokerage fees each represent ~6.7% of reviews, potentially limiting engagement and revenue growth."
+    ]
+  },
+  "metrics": {
+    "reviews_analyzed": 15,
+    "avg_star_rating": 4.2,
+    "sentiment_distribution": {
+      "positive_count": 9,
+      "neutral_count": 2,
+      "negative_count": 4,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 60.0,
+        "neutral": 13.33,
+        "negative": 26.67,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 6,
+    "emerging_count": 0,
+    "critical_high_count": 1,
+    "rating_distribution": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 10
+    }
+  },
+  "top_themes": [
+    {
+      "theme": {
+        "theme": {
+          "id": "theme_2",
+          "name": "App launch / opening failures",
+          "description": "Reports that the app fails to open or remains stuck, preventing users from accessing its features.",
+          "review_count": 1,
+          "review_percentage": 6.67,
+          "sentiment_distribution": {
+            "positive_count": 0,
+            "neutral_count": 0,
+            "negative_count": 1,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 0.0,
+              "neutral": 0.0,
+              "negative": 100.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "high",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "2e3c1708-7164-4c43-87a8-33dea64f09dd"
+          ]
+        },
+        "priority": "high",
+        "score": 0.6,
+        "factor_breakdown": {
+          "frequency": 0.03335,
+          "negative_sentiment": 0.25,
+          "severity_language": 0.1875,
+          "growth": 0.125
+        },
+        "rationale": "High priority due to negative sentiment."
+      },
+      "summary": "Reports that the app fails to open or remains stuck, preventing users from accessing its features.",
+      "key_quotes": [
+        {
+          "displayed_text": "still not getting open",
+          "original_text": "still not getting open",
+          "is_truncated": false,
+          "review_date": "2026-09-04 18:20:12",
+          "star_rating": 1,
+          "source_review_id": "2e3c1708-7164-4c43-87a8-33dea64f09dd",
+          "theme_id": "theme_2"
+        }
+      ]
+    },
+    {
+      "theme": {
+        "theme": {
+          "id": "theme_1",
+          "name": "Usability issues after recent app update",
+          "description": "Users report that the latest app update is not user\u2011friendly and request a rollback or improvements.",
+          "review_count": 1,
+          "review_percentage": 6.67,
+          "sentiment_distribution": {
+            "positive_count": 0,
+            "neutral_count": 0,
+            "negative_count": 1,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 0.0,
+              "neutral": 0.0,
+              "negative": 100.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "medium",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "4c7c1394-5dee-4af2-9400-4d3abc0a1cd8"
+          ]
+        },
+        "priority": "high",
+        "score": 0.53,
+        "factor_breakdown": {
+          "frequency": 0.03335,
+          "negative_sentiment": 0.25,
+          "severity_language": 0.125,
+          "growth": 0.125
+        },
+        "rationale": "High priority due to negative sentiment."
+      },
+      "summary": "Users report that the latest app update is not user\u2011friendly and request a rollback or improvements.",
+      "key_quotes": [
+        {
+          "displayed_text": "I am using groww app from last 5years, this is first time, last update is not user friendly. please rollback this as soon as possible.",
+          "original_text": "I am using groww app from last 5years, this is first time, last update is not user friendly. please rollback this as soon as possible.",
+          "is_truncated": false,
+          "review_date": "2026-09-04 19:00:01",
+          "star_rating": 3,
+          "source_review_id": "4c7c1394-5dee-4af2-9400-4d3abc0a1cd8",
+          "theme_id": "theme_1"
+        }
+      ]
+    },
+    {
+      "theme": {
+        "theme": {
+          "id": "theme_3",
+          "name": "UI/UX design complaints",
+          "description": "Negative feedback focused on the visual appearance and overall user\u2011interface design of the app.",
+          "review_count": 1,
+          "review_percentage": 6.67,
+          "sentiment_distribution": {
+            "positive_count": 0,
+            "neutral_count": 0,
+            "negative_count": 1,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 0.0,
+              "neutral": 0.0,
+              "negative": 100.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "medium",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "ebf78671-e6a7-403a-b08b-72178488398b"
+          ]
+        },
+        "priority": "high",
+        "score": 0.53,
+        "factor_breakdown": {
+          "frequency": 0.03335,
+          "negative_sentiment": 0.25,
+          "severity_language": 0.125,
+          "growth": 0.125
+        },
+        "rationale": "High priority due to negative sentiment."
+      },
+      "summary": "Negative feedback focused on the visual appearance and overall user\u2011interface design of the app.",
+      "key_quotes": [
+        {
+          "displayed_text": "look bad",
+          "original_text": "look bad",
+          "is_truncated": false,
+          "review_date": "2026-09-04 17:50:42",
+          "star_rating": 2,
+          "source_review_id": "ebf78671-e6a7-403a-b08b-72178488398b",
+          "theme_id": "theme_3"
+        }
+      ]
+    },
+    {
+      "theme": {
+        "theme": {
+          "id": "theme_4",
+          "name": "High brokerage and pricing fees",
+          "description": "Users complain about excessive brokerage charges per trade and overall pricing structure.",
+          "review_count": 1,
+          "review_percentage": 6.67,
+          "sentiment_distribution": {
+            "positive_count": 0,
+            "neutral_count": 0,
+            "negative_count": 1,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 0.0,
+              "neutral": 0.0,
+              "negative": 100.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "trading",
+          "severity": "medium",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "32faeb3b-58bb-4a37-9957-a2f62b769642"
+          ]
+        },
+        "priority": "high",
+        "score": 0.53,
+        "factor_breakdown": {
+          "frequency": 0.03335,
+          "negative_sentiment": 0.25,
+          "severity_language": 0.125,
+          "growth": 0.125
+        },
+        "rationale": "High priority due to negative sentiment."
+      },
+      "summary": "Users complain about excessive brokerage charges per trade and overall pricing structure.",
+      "key_quotes": [
+        {
+          "displayed_text": "brokerage charges bahut jada per trade 40 plus extra charge alag.",
+          "original_text": "brokerage charges bahut jada per trade 40 plus extra charge alag.",
+          "is_truncated": false,
+          "review_date": "2026-09-04 17:28:28",
+          "star_rating": 3,
+          "source_review_id": "32faeb3b-58bb-4a37-9957-a2f62b769642",
+          "theme_id": "theme_4"
+        }
+      ]
+    },
+    {
+      "theme": {
+        "theme": {
+          "id": "theme_6",
+          "name": "General positive remarks",
+          "description": "Broad, non\u2011specific praise for the app\u2019s overall quality and performance.",
+          "review_count": 7,
+          "review_percentage": 46.67,
+          "sentiment_distribution": {
+            "positive_count": 7,
+            "neutral_count": 0,
+            "negative_count": 0,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 100.0,
+              "neutral": 0.0,
+              "negative": 0.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "low",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "ab834bd0-77e8-4118-99d2-a9d961514031",
+            "67e30490-3c4b-4925-98bd-6232fe6569f1",
+            "08577520-e025-4925-ae53-28e4a296c29e",
+            "4ce6fd19-0a8d-4ca0-811c-70abbf5c4aa2",
+            "f5713993-5981-4bca-864c-c75a725dc0ff",
+            "5f914b68-0b79-45d7-95ec-0b044cfc82ec",
+            "7a1526eb-2898-4b11-8938-0479091ca879"
+          ]
+        },
+        "priority": "medium",
+        "score": 0.42,
+        "factor_breakdown": {
+          "frequency": 0.23335,
+          "negative_sentiment": 0.0,
+          "severity_language": 0.0625,
+          "growth": 0.125
+        },
+        "rationale": "Medium priority. Needs monitoring."
+      },
+      "summary": "Broad, non\u2011specific praise for the app\u2019s overall quality and performance.",
+      "key_quotes": [
+        {
+          "displayed_text": "exilent application",
+          "original_text": "exilent application",
+          "is_truncated": false,
+          "review_date": "2026-09-04 18:30:01",
+          "star_rating": 5,
+          "source_review_id": "5f914b68-0b79-45d7-95ec-0b044cfc82ec",
+          "theme_id": "theme_6"
+        },
+        {
+          "displayed_text": "very good \ud83d\udc4d",
+          "original_text": "very good \ud83d\udc4d",
+          "is_truncated": false,
+          "review_date": "2026-09-04 17:54:26",
+          "star_rating": 5,
+          "source_review_id": "08577520-e025-4925-ae53-28e4a296c29e",
+          "theme_id": "theme_6"
+        }
+      ]
+    }
+  ],
+  "what_users_love": [
+    {
+      "title": "General positive remarks",
+      "description": "Broad, non\u2011specific praise for the app\u2019s overall quality and performance.",
+      "quotes": [
+        {
+          "displayed_text": "exilent application",
+          "original_text": "exilent application",
+          "is_truncated": false,
+          "review_date": "2026-09-04 18:30:01",
+          "star_rating": 5,
+          "source_review_id": "5f914b68-0b79-45d7-95ec-0b044cfc82ec",
+          "theme_id": "theme_6"
+        },
+        {
+          "displayed_text": "very good \ud83d\udc4d",
+          "original_text": "very good \ud83d\udc4d",
+          "is_truncated": false,
+          "review_date": "2026-09-04 17:54:26",
+          "star_rating": 5,
+          "source_review_id": "08577520-e025-4925-ae53-28e4a296c29e",
+          "theme_id": "theme_6"
+        }
+      ]
+    },
+    {
+      "title": "Positive feedback on investment/trading features",
+      "description": "Praise for the app\u2019s trading and investment capabilities, highlighting growth potential and being the best in class.",
+      "quotes": [
+        {
+          "displayed_text": "To continuously grow your investment opt for only Groww App. Thanks.",
+          "original_text": "To continuously grow your investment opt for only Groww App. Thanks.",
+          "is_truncated": false,
+          "review_date": "2026-09-04 12:52:23",
+          "star_rating": 5,
+          "source_review_id": "80355e16-430d-47d8-a762-817069349e40",
+          "theme_id": "theme_5"
+        },
+        {
+          "displayed_text": "best trading and investment app",
+          "original_text": "best trading and investment app",
+          "is_truncated": false,
+          "review_date": "2026-09-04 12:37:15",
+          "star_rating": 5,
+          "source_review_id": "0feba5b4-42a4-4c79-87ae-fb85773c2f51",
+          "theme_id": "theme_5"
+        }
+      ]
+    }
+  ],
+  "top_pain_points": [
+    {
+      "title": "App launch / opening failures",
+      "severity": "high",
+      "description": "Reports that the app fails to open or remains stuck, preventing users from accessing its features.",
+      "quotes": [
+        {
+          "displayed_text": "still not getting open",
+          "original_text": "still not getting open",
+          "is_truncated": false,
+          "review_date": "2026-09-04 18:20:12",
+          "star_rating": 1,
+          "source_review_id": "2e3c1708-7164-4c43-87a8-33dea64f09dd",
+          "theme_id": "theme_2"
+        }
+      ]
+    },
+    {
+      "title": "Usability issues after recent app update",
+      "severity": "medium",
+      "description": "Users report that the latest app update is not user\u2011friendly and request a rollback or improvements.",
+      "quotes": [
+        {
+          "displayed_text": "I am using groww app from last 5years, this is first time, last update is not user friendly. please rollback this as soon as possible.",
+          "original_text": "I am using groww app from last 5years, this is first time, last update is not user friendly. please rollback this as soon as possible.",
+          "is_truncated": false,
+          "review_date": "2026-09-04 19:00:01",
+          "star_rating": 3,
+          "source_review_id": "4c7c1394-5dee-4af2-9400-4d3abc0a1cd8",
+          "theme_id": "theme_1"
+        }
+      ]
+    },
+    {
+      "title": "UI/UX design complaints",
+      "severity": "medium",
+      "description": "Negative feedback focused on the visual appearance and overall user\u2011interface design of the app.",
+      "quotes": [
+        {
+          "displayed_text": "look bad",
+          "original_text": "look bad",
+          "is_truncated": false,
+          "review_date": "2026-09-04 17:50:42",
+          "star_rating": 2,
+          "source_review_id": "ebf78671-e6a7-403a-b08b-72178488398b",
+          "theme_id": "theme_3"
+        }
+      ]
+    },
+    {
+      "title": "High brokerage and pricing fees",
+      "severity": "medium",
+      "description": "Users complain about excessive brokerage charges per trade and overall pricing structure.",
+      "quotes": [
+        {
+          "displayed_text": "brokerage charges bahut jada per trade 40 plus extra charge alag.",
+          "original_text": "brokerage charges bahut jada per trade 40 plus extra charge alag.",
+          "is_truncated": false,
+          "review_date": "2026-09-04 17:28:28",
+          "star_rating": 3,
+          "source_review_id": "32faeb3b-58bb-4a37-9957-a2f62b769642",
+          "theme_id": "theme_4"
+        }
+      ]
+    }
+  ],
+  "emerging_signals": [
+    {
+      "signal": {
+        "theme": {
+          "id": "theme_6",
+          "name": "General positive remarks",
+          "description": "Broad, non\u2011specific praise for the app\u2019s overall quality and performance.",
+          "review_count": 7,
+          "review_percentage": 46.67,
+          "sentiment_distribution": {
+            "positive_count": 7,
+            "neutral_count": 0,
+            "negative_count": 0,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 100.0,
+              "neutral": 0.0,
+              "negative": 0.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "low",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "ab834bd0-77e8-4118-99d2-a9d961514031",
+            "67e30490-3c4b-4925-98bd-6232fe6569f1",
+            "08577520-e025-4925-ae53-28e4a296c29e",
+            "4ce6fd19-0a8d-4ca0-811c-70abbf5c4aa2",
+            "f5713993-5981-4bca-864c-c75a725dc0ff",
+            "5f914b68-0b79-45d7-95ec-0b044cfc82ec",
+            "7a1526eb-2898-4b11-8938-0479091ca879"
+          ]
+        },
+        "trend_type": "new",
+        "evidence": "This theme accounts for 46.67% of reviews and is flagged as a new emergence.",
+        "interpretation": "A large share of users are expressing broad satisfaction, indicating overall product health but also that feedback is currently generic.",
+        "recommendation": "Highlight these positive sentiments in marketing and user communications while setting up mechanisms to capture more specific praise or concerns.",
+        "volume_change_pct": null,
+        "sentiment_change": null
+      },
+      "summary": "New theme detected: Broad, non\u2011specific praise for the app\u2019s overall quality and performance."
+    },
+    {
+      "signal": {
+        "theme": {
+          "id": "theme_5",
+          "name": "Positive feedback on investment/trading features",
+          "description": "Praise for the app\u2019s trading and investment capabilities, highlighting growth potential and being the best in class.",
+          "review_count": 2,
+          "review_percentage": 13.33,
+          "sentiment_distribution": {
+            "positive_count": 2,
+            "neutral_count": 0,
+            "negative_count": 0,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 100.0,
+              "neutral": 0.0,
+              "negative": 0.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "trading",
+          "severity": "low",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "80355e16-430d-47d8-a762-817069349e40",
+            "0feba5b4-42a4-4c79-87ae-fb85773c2f51"
+          ]
+        },
+        "trend_type": "new",
+        "evidence": "This theme accounts for 13.33% of reviews and is flagged as a new emergence.",
+        "interpretation": "Users are specifically appreciating the investment and trading capabilities, suggesting these features are a key differentiator.",
+        "recommendation": "Invest in further enhancements, create targeted tutorials, and promote the trading suite in product messaging.",
+        "volume_change_pct": null,
+        "sentiment_change": null
+      },
+      "summary": "New theme detected: Praise for the app\u2019s trading and investment capabilities, highlighting growth potential and being the best in class."
+    },
+    {
+      "signal": {
+        "theme": {
+          "id": "theme_1",
+          "name": "Usability issues after recent app update",
+          "description": "Users report that the latest app update is not user\u2011friendly and request a rollback or improvements.",
+          "review_count": 1,
+          "review_percentage": 6.67,
+          "sentiment_distribution": {
+            "positive_count": 0,
+            "neutral_count": 0,
+            "negative_count": 1,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 0.0,
+              "neutral": 0.0,
+              "negative": 100.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "medium",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "4c7c1394-5dee-4af2-9400-4d3abc0a1cd8"
+          ]
+        },
+        "trend_type": "new",
+        "evidence": "This theme accounts for 6.67% of reviews and is flagged as a new emergence.",
+        "interpretation": "Usability problems introduced by the latest update are causing friction, which could lead to churn if not addressed quickly.",
+        "recommendation": "Conduct a rapid usability audit of the recent release, roll back or refine problematic changes, and improve in\u2011app guidance for affected flows.",
+        "volume_change_pct": null,
+        "sentiment_change": null
+      },
+      "summary": "New theme detected: Users report that the latest app update is not user\u2011friendly and request a rollback or improvements."
+    },
+    {
+      "signal": {
+        "theme": {
+          "id": "theme_2",
+          "name": "App launch / opening failures",
+          "description": "Reports that the app fails to open or remains stuck, preventing users from accessing its features.",
+          "review_count": 1,
+          "review_percentage": 6.67,
+          "sentiment_distribution": {
+            "positive_count": 0,
+            "neutral_count": 0,
+            "negative_count": 1,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 0.0,
+              "neutral": 0.0,
+              "negative": 100.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "high",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "2e3c1708-7164-4c43-87a8-33dea64f09dd"
+          ]
+        },
+        "trend_type": "new",
+        "evidence": "This theme accounts for 6.67% of reviews and is flagged as a new emergence.",
+        "interpretation": "App launch failures are a critical stability issue that prevents users from accessing any functionality, posing a high risk to retention.",
+        "recommendation": "Prioritize debugging and fixing launch crashes, increase automated regression testing, and monitor crash analytics for early detection.",
+        "volume_change_pct": null,
+        "sentiment_change": null
+      },
+      "summary": "New theme detected: Reports that the app fails to open or remains stuck, preventing users from accessing its features."
+    },
+    {
+      "signal": {
+        "theme": {
+          "id": "theme_3",
+          "name": "UI/UX design complaints",
+          "description": "Negative feedback focused on the visual appearance and overall user\u2011interface design of the app.",
+          "review_count": 1,
+          "review_percentage": 6.67,
+          "sentiment_distribution": {
+            "positive_count": 0,
+            "neutral_count": 0,
+            "negative_count": 1,
+            "mixed_count": 0,
+            "percentages": {
+              "positive": 0.0,
+              "neutral": 0.0,
+              "negative": 100.0,
+              "mixed": 0.0
+            }
+          },
+          "product_area": "other",
+          "severity": "medium",
+          "is_recurring": false,
+          "is_emerging": false,
+          "recommended_action": null,
+          "review_ids": [
+            "ebf78671-e6a7-403a-b08b-72178488398b"
+          ]
+        },
+        "trend_type": "new",
+        "evidence": "This theme accounts for 6.67% of reviews and is flagged as a new emergence.",
+        "interpretation": "Design complaints indicate the current UI/UX does not meet user expectations, potentially affecting engagement and adoption.",
+        "recommendation": "Run targeted usability testing sessions, gather concrete design feedback, and iterate on the visual and interaction design accordingly.",
+        "volume_change_pct": null,
+        "sentiment_change": null
+      },
+      "summary": "New theme detected: Negative feedback focused on the visual appearance and overall user\u2011interface design of the app."
+    }
+  ],
+  "feature_requests": [
+    {
+      "title": "Positive feedback on investment/trading features",
+      "description": "Praise for the app\u2019s trading and investment capabilities, highlighting growth potential and being the best in class.",
+      "frequency": 2
+    },
+    {
+      "title": "Usability issues after recent app update",
+      "description": "Users report that the latest app update is not user\u2011friendly and request a rollback or improvements.",
+      "frequency": 1
+    }
+  ],
+  "representative_voice": [
+    {
+      "displayed_text": "still not getting open",
+      "original_text": "still not getting open",
+      "is_truncated": false,
+      "review_date": "2026-09-04 18:20:12",
+      "star_rating": 1,
+      "source_review_id": "2e3c1708-7164-4c43-87a8-33dea64f09dd",
+      "theme_id": "theme_2"
+    },
+    {
+      "displayed_text": "I am using groww app from last 5years, this is first time, last update is not user friendly. please rollback this as soon as possible.",
+      "original_text": "I am using groww app from last 5years, this is first time, last update is not user friendly. please rollback this as soon as possible.",
+      "is_truncated": false,
+      "review_date": "2026-09-04 19:00:01",
+      "star_rating": 3,
+      "source_review_id": "4c7c1394-5dee-4af2-9400-4d3abc0a1cd8",
+      "theme_id": "theme_1"
+    },
+    {
+      "displayed_text": "look bad",
+      "original_text": "look bad",
+      "is_truncated": false,
+      "review_date": "2026-09-04 17:50:42",
+      "star_rating": 2,
+      "source_review_id": "ebf78671-e6a7-403a-b08b-72178488398b",
+      "theme_id": "theme_3"
+    }
+  ],
+  "recommended_actions": [
+    {
+      "theme_id": "theme_2",
+      "action": "Launch a rapid root\u2011cause investigation and hot\u2011fix for app launch failures within 2 weeks.",
+      "priority": "HIGH",
+      "owner_suggestion": null
+    },
+    {
+      "theme_id": "theme_1",
+      "action": "Conduct a usability audit of the recent update, prioritize UI refinements and enhanced onboarding, and ship improvements within 4 weeks.",
+      "priority": "HIGH",
+      "owner_suggestion": null
+    },
+    {
+      "theme_id": "theme_3",
+      "action": "Start a redesign sprint focused on the most cited UI/UX pain points, incorporating user testing before the next release.",
+      "priority": "HIGH",
+      "owner_suggestion": null
+    },
+    {
+      "theme_id": "theme_4",
+      "action": "Benchmark brokerage and pricing fees against competitors and evaluate tiered or discount structures for active traders.",
+      "priority": "HIGH",
+      "owner_suggestion": null
+    },
+    {
+      "theme_id": "theme_6",
+      "action": "Amplify positive sentiment by highlighting investment/trading strengths in marketing, in\u2011app messaging, and by encouraging detailed user reviews.",
+      "priority": "HIGH",
+      "owner_suggestion": null
+    }
+  ],
+  "methodology": {
+    "source": "Google Play Store",
+    "app_id": "com.nextbillion.groww",
+    "period": "2026-09-02 to 2026-09-05",
+    "timestamp": "2026-09-05 19:38:34.740278",
+    "total_fetched": 50,
+    "usable_reviews": 15,
+    "limitations": [
+      "Limited to reviews collected in English",
+      "Sentiment analysis is AI-generated and may have edge case errors"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+﻿{
+  "themes": [
+    {
+      "id": "t1",
+      "name": "App Crashes on Portfolio Open",
+      "description": "Users are reporting that the app crashes immediately when trying to open their portfolio.",
+      "review_count": 1,
+      "review_percentage": 33.33,
+      "sentiment_distribution": {
+        "positive_count": 0,
+        "neutral_count": 0,
+        "negative_count": 1,
+        "mixed_count": 0,
+        "percentages": {
+          "positive": 0.0,
+          "neutral": 0.0,
+          "negative": 100.0,
+          "mixed": 0.0
+        }
+      },
+      "product_area": "trading",
+      "severity": "high",
+      "review_ids": ["r1"],
+      "is_recurring": false,
+      "is_emerging": true,
+      "recommended_action": "Investigate crash logs related to portfolio view rendering."
+    },
+    {
+      "id": "t2",
+      "name": "Great UI and Ease of Use",
+      "description": "Users appreciate the user interface and find the app easy to use.",
+      "review_count": 1,
+      "review_percentage": 33.33,
+      "sentiment_distribution": {
+        "positive_count": 1,
+        "neutral_count": 0,
+        "negative_count": 0,
+        "mixed_count": 0,
+        "percentages": {
+          "positive": 100.0,
+          "neutral": 0.0,
+          "negative": 0.0,
+          "mixed": 0.0
+        }
+      },
+      "product_area": "trading",
+      "severity": "low",
+      "review_ids": ["r2"],
+      "is_recurring": true,
+      "is_emerging": false,
+      "recommended_action": "None"
+    }
+  ],
+  "unthemed_count": 1
+}

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#eef0fd", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "primary": "#006c4f", "surface-bright": "#f9f9ff", "surface-container-highest": "#dfe2ef", "surface-dim": "#d7dae6", "outline": "#6b7b72", "on-primary-fixed": "#002116", "on-primary-container": "#00533c", "surface-variant": "#dfe2ef", "on-error": "#ffffff", "on-tertiary-container": "#644100", "secondary-fixed-dim": "#bcc2ff", "surface-container-high": "#e5e8f4", "surface-container": "#ebedfa", "on-surface-variant": "#3c4a43", "outline-variant": "#bacac1", "on-secondary-fixed": "#000b62", "primary-fixed": "#59fdc5", "tertiary-fixed-dim": "#ffba4b", "primary-fixed-dim": "#2fe0aa", "secondary": "#3247e2", "on-tertiary-fixed-variant": "#624000", "on-secondary": "#ffffff", "surface-container-low": "#f1f3ff", "error": "#ba1a1a", "primary-container": "#00d09c", "surface": "#f9f9ff", "background": "#f9f9ff", "on-background": "#181c24", "surface-tint": "#006c4f", "on-secondary-container": "#fffbff", "tertiary": "#815600", "on-secondary-fixed-variant": "#102bcd", "secondary-fixed": "#dfe0ff", "inverse-primary": "#2fe0aa", "on-surface": "#181c24", "secondary-container": "#4f63fb", "tertiary-fixed": "#ffddb1", "inverse-surface": "#2c303a", "tertiary-container": "#f5a814", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#291800", "on-primary-fixed-variant": "#00513b" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "1.5rem", "space-sm": "0.75rem", "space-2xs": "0.25rem", "container-max": "1280px", "gutter-mobile": "1rem", "space-3xl": "3rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-2xl": "2rem", "space-md": "1rem", "space-4xl": "4rem", "space-lg": "1.25rem" }, fontFamily: { "body-lg": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "numeric-metric-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "label-md": ["Inter"], "numeric-metric-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "title-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "title-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "numeric-metric-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "numeric-metric-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-lg": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs flex-shrink-0"><img alt="Groww Feedback Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VZsgXVeWlfXB67KP2TYn5CAdTqx9Z6txI_7LgA3wmtNftd4Kuinw9dq4T76kUfaGvwZzYfBpmK-bALF8mRvkspRn0A8L9-V8FaInXtmMmkQg-API8_KrsVTOnbp-F54nE9VB0eZFzy8Xoe8Lw8QhK0f1ZjkHrKBgfN152RjfPARdeMpzS84LLBQc47hLe0Er29ziIgb0CoBsrDj1FG1hOzY_ak0ctq4UdciWoiogHcJ2IQ-KdVNX9Bqk2H"/><span class="font-title-md text-title-md text-on-surface tracking-tight hidden xs:inline">Intelligence</span></div><div class="flex items-center gap-space-xs"><button class="h-9 px-space-sm rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-space-2xs text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span><span class="font-label-md text-label-md font-semibold text-on-surface">Week 42, 2024</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></button><button aria-label="Search" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="flex-shrink-0 ml-space-2xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOxPyBqE9lHbgAkcuCSifIs0JXzGhrQ7wSJlmYZIciRMHkTZ7jzroLhJk2SqSOtogX2DpvJL0g-SQw8xaS09xW_nIYlvOlqm9QPph_VgALVPbbbQwteBv2Tg8VXb05MhXiBhYr3Qom3yv2HXqmD_veyz-aETn7MUpXMFHxGGD6SbBd1wU3xaColmyblt1I36qyeorNueQQV0dVfzhsFa9_5ylbWDXB0O0XrmUd5XtFlHvEIaKnT2OLpA"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-8">
+<!-- Top Intro Context Badge -->
+<div class="flex items-center justify-between mb-space-sm pt-space-xs">
+<div class="flex items-center gap-space-2xs">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Executive Cockpit</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded-full font-medium">Real-time Sync (12m ago)</span>
+</div>
+<!-- Hero Section: Overall App Health Score -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md mb-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Overall App Health Score</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-numeric-metric-lg text-numeric-metric-lg text-on-surface tracking-tight">8.4</span>
+<span class="font-title-md text-title-md text-on-surface-variant">/ 10</span>
+<span class="inline-flex items-center gap-0.5 ml-space-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +0.6 vs last week
+          </span>
+</div>
+</div>
+<!-- Mini circular radial ring gauge -->
+<div class="relative w-12 h-12 flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="84, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+<!-- Health Breakdown Pills -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-md pt-space-xs bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Crash-Free Rate</p>
+<p class="font-title-md text-title-md text-on-surface font-semibold">99.88% <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">(0.12%)</span></p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sentiment_satisfied</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">CSAT Rating</p>
+<p class="font-title-md text-title-md text-on-surface font-semibold">87% <span class="font-body-sm text-body-sm text-primary font-medium">↑ 3%</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Metric Cards: 2-Column Grid -->
+<section class="grid grid-cols-2 gap-space-sm mb-space-md">
+<!-- Total Reviews Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total Reviews</span>
+<span class="material-symbols-outlined text-[18px] text-outline">reviews</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-numeric-metric-md text-numeric-metric-md text-on-surface">14,820</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +12.4%
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">WoW</span>
+</div>
+</div>
+<div class="h-6 w-full mt-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 24">
+<defs>
+<lineargradient id="grad-rev" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#00d09c" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#00d09c" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,18 Q15,16 30,12 T60,10 T85,4 L100,2 L100,24 L0,24 Z" fill="url(#grad-rev)"></path>
+<path d="M0,18 Q15,16 30,12 T60,10 T85,4 L100,2" fill="none" stroke="#00d09c" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- WoW Volume Change Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Net Influx</span>
+<span class="material-symbols-outlined text-[18px] text-outline">moving</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-numeric-metric-md text-numeric-metric-md text-on-surface">+1,630</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm font-semibold">
+            Accelerating
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">vs W41</span>
+</div>
+</div>
+<div class="h-6 w-full mt-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 24">
+<defs>
+<lineargradient id="grad-net" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3247e2" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#3247e2" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,20 C20,18 40,14 60,10 C80,6 90,3 100,1 L100,24 L0,24 Z" fill="url(#grad-net)"></path>
+<path d="M0,20 C20,18 40,14 60,10 C80,6 90,3 100,1" fill="none" stroke="#3247e2" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- Highlight Cards: Top Praised & Critical Pain Point -->
+<section class="space-y-space-xs mb-space-md">
+<!-- Top Praised Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-primary">Top Praised Feature</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.8★ (+92%)
+          </span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-1 truncate">Instant UPI Payouts &amp; Portfolio Tracker</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Seamless bank settles and real-time gain recalculation.</p>
+</div>
+</div>
+<!-- Critical Pain Point Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-error">Critical Pain Point</span>
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">warning</span> -68% (340 reports)
+          </span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-1 truncate">KYC Document Verification Latency</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Aadhaar XML timeouts causing drop-offs at step 2.</p>
+</div>
+</div>
+</section>
+<!-- AI Executive Summary Card (Indigo Glass Vibe) -->
+<section class="bg-gradient-to-br from-secondary/10 via-surface-container-lowest to-surface-container-low p-space-md rounded-xl shadow-sm mb-space-lg relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary/5 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AI Executive Synthesis</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold">W42 Intelligence</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">5 critical shifts detected by natural language clustering over 14.8k signals:</p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5 flex-shrink-0">check_circle</span>
+<span><strong>Options chain v2 update</strong> received high praise (+41% sentiment lift) for Greeks visual clarity.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-error mt-0.5 flex-shrink-0">error</span>
+<span><strong>iOS 18 biometric login timeout:</strong> 8-fold spike in FaceID loop bugs post latest OS rollout.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5 flex-shrink-0">check_circle</span>
+<span><strong>Mutual fund SIP auto-debit:</strong> Failure rate dropped 14% after NPCI gateway fallback retry fix.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5 flex-shrink-0">report_problem</span>
+<span><strong>Android memory leak:</strong> High zoom frequency on candlestick charts crashes in 120 verified reviews.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5 flex-shrink-0">check_circle</span>
+<span><strong>Onboarding completion rate:</strong> Shifted up <strong>+4.2%</strong> following streamlined nominee input UI.</span>
+</li>
+</ul>
+</section>
+<!-- Section 2: Sentiment & Trends (Visualizations) -->
+<section class="space-y-space-md mb-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sentiment &amp; Trends</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Aggregate user sentiment polarity</p>
+</div>
+<button class="text-secondary font-label-md text-label-md font-semibold flex items-center gap-0.5">
+        Filter <span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+<!-- Donut Chart Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-on-surface">Sentiment Distribution</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14,820 records</span>
+</div>
+<div class="flex items-center justify-around gap-space-sm py-space-xs">
+<!-- SVG Donut Chart -->
+<div class="relative w-36 h-36 flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<!-- Circumference = 2 * PI * 40 = 251.32 -->
+<!-- Positive: 62% -> 155.8 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#ebedfa" stroke-width="12"></circle>
+<!-- Positive 62% (#00d09c) -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#00d09c" stroke-dasharray="148 238.7" stroke-dashoffset="0" stroke-width="12"></circle>
+<!-- Neutral 18% (#94a3b8) -> 43.0 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#94a3b8" stroke-dasharray="43 238.7" stroke-dashoffset="-148" stroke-width="12"></circle>
+<!-- Negative 15% (#eb5757) -> 35.8 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#ba1a1a" stroke-dasharray="36 238.7" stroke-dashoffset="-191" stroke-width="12"></circle>
+<!-- Mixed 5% (#ffba4b) -> 11.9 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#ffba4b" stroke-dasharray="12 238.7" stroke-dashoffset="-227" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-numeric-metric-md text-numeric-metric-md text-on-surface leading-tight">62%</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Positive</span>
+</div>
+</div>
+<!-- Legend breakdown -->
+<div class="space-y-space-xs flex-1 max-w-[150px]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container flex-shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Positive</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">62%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-slate-400 flex-shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Neutral</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">18%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-error flex-shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Negative</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">15%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary-fixed-dim flex-shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Mixed</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">5%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 12-Week Net Sentiment Score Chart -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<span class="font-title-md text-title-md text-on-surface">Net Sentiment Score</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">12-Week Rolling Trendline</p>
+</div>
+<div class="text-right">
+<span class="font-numeric-metric-md text-numeric-metric-md text-primary">+68</span>
+<span class="font-label-sm text-label-sm text-primary block font-medium">+26 pts QoQ</span>
+</div>
+</div>
+<!-- SVG Line Chart with Grid and Point Tooltip -->
+<div class="relative w-full h-44 pt-space-xs">
+<svg class="w-full h-full" viewbox="0 0 320 140">
+<defs>
+<lineargradient id="line-area-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#00d09c" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#00d09c" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle Horizontal Gridlines -->
+<line stroke="#ebedfa" stroke-width="1" x1="20" x2="310" y1="20" y2="20"></line>
+<line stroke="#ebedfa" stroke-width="1" x1="20" x2="310" y1="55" y2="55"></line>
+<line stroke="#ebedfa" stroke-width="1" x1="20" x2="310" y1="90" y2="90"></line>
+<line stroke="#dfe2ef" stroke-width="1" x1="20" x2="310" y1="125" y2="125"></line>
+<!-- Grid Axis labels -->
+<text fill="#6b7b72" font-family="Inter" font-size="9" x="5" y="23">+75</text>
+<text fill="#6b7b72" font-family="Inter" font-size="9" x="5" y="58">+60</text>
+<text fill="#6b7b72" font-family="Inter" font-size="9" x="5" y="93">+45</text>
+<text fill="#6b7b72" font-family="Inter" font-size="9" x="5" y="128">+30</text>
+<!-- Area under curve -->
+<path d="M 25 100 
+                   C 60 96, 85 92, 115 80
+                   C 145 68, 175 75, 205 60
+                   C 235 48, 270 38, 305 28
+                   L 305 125 L 25 125 Z" fill="url(#line-area-grad)"></path>
+<!-- Trajectory Line -->
+<path d="M 25 100 
+                   C 60 96, 85 92, 115 80
+                   C 145 68, 175 75, 205 60
+                   C 235 48, 270 38, 305 28" fill="none" stroke="#006c4f" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Markers -->
+<circle cx="25" cy="100" fill="#ffffff" r="3.5" stroke="#006c4f" stroke-width="2"></circle>
+<circle cx="115" cy="80" fill="#ffffff" r="3.5" stroke="#006c4f" stroke-width="2"></circle>
+<circle cx="205" cy="60" fill="#ffffff" r="3.5" stroke="#006c4f" stroke-width="2"></circle>
+<circle cx="305" cy="28" fill="#00d09c" r="5" stroke="#ffffff" stroke-width="2.5"></circle>
+<!-- Tooltip Marker on Latest Point -->
+<g transform="translate(255, 6)">
+<rect fill="#181c24" height="18" rx="4" width="52"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="9.5" font-weight="600" text-anchor="middle" x="26" y="12.5">W42: +68</text>
+</g>
+</svg>
+<!-- X-axis labels -->
+<div class="flex justify-between px-6 font-label-sm text-label-sm text-on-surface-variant -mt-2">
+<span>W31</span>
+<span>W34</span>
+<span>W38</span>
+<span class="font-semibold text-primary">W42</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: The Action Matrix (Severity vs Frequency) -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-lg">
+<div class="flex items-start justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">The Action Matrix</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prioritizing Impact vs Feedback Volume</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">grid_view</span>
+</div>
+<!-- 2x2 Scatter Matrix Container -->
+<div class="relative w-full rounded-xl bg-surface-container-low p-space-xs overflow-hidden">
+<!-- 4 Quadrants Grid -->
+<div class="grid grid-cols-2 grid-rows-2 gap-1.5 h-64 w-full">
+<!-- Top Left: Monitor (High Severity, Low Volume) -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-space-xs flex flex-col justify-between relative">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Monitor (High Sev / Low Vol)</span>
+<!-- Sample point -->
+<div class="absolute top-10 left-8 flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold bg-surface-container-lowest/90 px-1 rounded shadow-xs truncate max-w-[85px]">Ledger Sync</span>
+</div>
+</div>
+<!-- Top Right: Immediate Action (High Severity, High Volume) - Prominently Highlighted -->
+<div class="bg-error/10 rounded-lg p-space-xs flex flex-col justify-between relative shadow-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-bold tracking-tight">IMMEDIATE ACTION</span>
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+</div>
+<!-- Scatter point 1: KYC Camera Freeze -->
+<div class="absolute top-8 left-4 flex items-center gap-1">
+<span class="w-3.5 h-3.5 rounded-full bg-error flex-shrink-0 ring-2 ring-surface-container-lowest shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-error font-bold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">KYC Camera Freeze</span>
+</div>
+<!-- Scatter point 2: F&O Latency -->
+<div class="absolute bottom-6 right-3 flex items-center gap-1">
+<span class="w-3.5 h-3.5 rounded-full bg-error flex-shrink-0 ring-2 ring-surface-container-lowest shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-error font-bold bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs truncate max-w-[100px]">F&amp;O Latency</span>
+</div>
+</div>
+<!-- Bottom Left: Low Priority (Low Severity, Low Volume) -->
+<div class="bg-surface-container-lowest/60 rounded-lg p-space-xs flex flex-col justify-between relative">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80">Low Priority</span>
+<div class="absolute bottom-8 left-10 flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avatars UI</span>
+</div>
+</div>
+<!-- Bottom Right: Quick Wins (Low Severity, High Volume) -->
+<div class="bg-surface-container-lowest/90 rounded-lg p-space-xs flex flex-col justify-between relative">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Quick Wins</span>
+<!-- Scatter point: Dark Mode Contrast -->
+<div class="absolute bottom-7 left-6 flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-primary-container ring-1 ring-primary flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-xs">Dark Mode Contrast</span>
+</div>
+</div>
+</div>
+<!-- Axis Overlay Indicators -->
+<div class="absolute bottom-1 right-2 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Volume →</span>
+</div>
+<div class="absolute top-2 left-1.5 -rotate-90 origin-top-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Impact →</span>
+</div>
+</div>
+</section>
+<!-- Section 4: Emerging Signals & Early Warnings (Horizontal Scrollable Carousel) -->
+<section class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Emerging Signals &amp; Warnings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Early telemetry flags prior to mass sentiment impact</p>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">swipe_left</span>
+</div>
+</div>
+<!-- Horizontal Scroll Carousel -->
+<div class="flex gap-space-sm overflow-x-auto pb-space-xs -mx-gutter-mobile px-gutter-mobile snap-x scrollbar-none">
+<!-- Card 1: TouchID Failure -->
+<div class="min-w-[260px] max-w-[270px] snap-start bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-sm text-label-sm font-semibold">Rapid Escalation</span>
+<span class="font-label-sm text-label-sm text-error font-bold">+45% WoW</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-space-xs">Biometric TouchID Failure</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">189 reviews logged this week. Authentication loop specifically on iOS 18 beta builds.</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Security &amp; Auth</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold flex items-center">Track <span class="material-symbols-outlined text-[14px]">chevron_right</span></button>
+</div>
+</div>
+<!-- Card 2: Bank Mandate Delay -->
+<div class="min-w-[260px] max-w-[270px] snap-start bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold">Payment Mandate</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">+32% WoW</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-space-xs">Bank Mandate Approval Delays</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">eNACH authorization backlog noted for 3 major partner banks during peak SIP dates.</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Mutual Funds</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold flex items-center">Track <span class="material-symbols-outlined text-[14px]">chevron_right</span></button>
+</div>
+</div>
+<!-- Card 3: New Theme Discovered: GTT Partial Fill -->
+<div class="min-w-[260px] max-w-[270px] snap-start bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">New Theme (v14.2)</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">42 reviews</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mt-space-xs">GTT Partial Fill Confusion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Users unclear why remaining limit volume cancels on intraday session close.</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Stocks &amp; Derivatives</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold flex items-center">Track <span class="material-symbols-outlined text-[14px]">chevron_right</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Voice of the Customer (VoC) Carousel -->
+<section class="mb-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Voice of the Customer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unfiltered verbatim feedback from verified investors</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Latest 24h</span>
+</div>
+<!-- Review Card List -->
+<div class="space-y-space-xs">
+<!-- Review 1: 5-Star Positive -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-2xs">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Delight</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">"Groww's 1-click SIP pause feature saved my monthly budget planning. Flawless UI and zero unnecessary paperwork!"</p>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[10px]">RS</span>
+<span class="font-medium text-on-surface">Rahul S.</span>
+</div>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Mutual Funds • Android</span>
+</div>
+</div>
+<!-- Review 2: 1-Star Critical -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-2xs">
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-sm text-label-sm font-semibold">Critical Issue</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">"KYC keeps rejecting my Aadhaar OTP despite correct details. The camera screen just turns pitch black. Please fix urgently!"</p>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-error/20 text-error flex items-center justify-center font-bold text-[10px]">PM</span>
+<span class="font-medium text-on-surface">Priya M.</span>
+</div>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Onboarding &amp; KYC • iOS</span>
+</div>
+</div>
+<!-- Review 3: 4-Star Mixed -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-2xs">
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold">Constructive Mixed</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">"Great stock charts and indicator choices, but candlesticks reload too slowly during market open on mobile 5G."</p>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-[10px]">VK</span>
+<span class="font-medium text-on-surface">Vikram K.</span>
+</div>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Trading &amp; F&amp;O • Android</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Share / Report Export Footer CTA -->
+<div class="mt-space-xs p-space-sm bg-surface-container rounded-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">mark_email_read</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Send Leadership Digest (PDF &amp; Slack)</span>
+</div>
+<button class="bg-primary text-on-primary px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold hover:bg-on-primary-container active:scale-95 transition-all shadow-sm flex items-center gap-1 flex-shrink-0">
+<span>Export</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary bg-primary/10 font-semibold"><div class="flex items-center justify-between h-16 px-space-xs"><a aria-current="page" class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 transition-all text-primary bg-primary/10 font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span class="font-label-sm text-label-sm truncate">Dashboard</span></a><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="trends-and-themes" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span><span class="font-label-sm text-label-sm truncate">Trends</span></a><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="product-areas" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-label-sm text-label-sm truncate">Areas</span></a><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="admin-controls" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-sm text-label-sm truncate">Admin</span></a><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="logs-and-history" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-label-sm text-label-sm truncate">Logs</span></a></div></nav></body></html>

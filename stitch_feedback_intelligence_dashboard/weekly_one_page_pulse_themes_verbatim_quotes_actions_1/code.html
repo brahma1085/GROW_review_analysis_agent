@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#eef0fd", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "primary": "#006c4f", "surface-bright": "#f9f9ff", "surface-container-highest": "#dfe2ef", "surface-dim": "#d7dae6", "outline": "#6b7b72", "on-primary-fixed": "#002116", "on-primary-container": "#00533c", "surface-variant": "#dfe2ef", "on-error": "#ffffff", "on-tertiary-container": "#644100", "secondary-fixed-dim": "#bcc2ff", "surface-container-high": "#e5e8f4", "surface-container": "#ebedfa", "on-surface-variant": "#3c4a43", "outline-variant": "#bacac1", "on-secondary-fixed": "#000b62", "primary-fixed": "#59fdc5", "tertiary-fixed-dim": "#ffba4b", "primary-fixed-dim": "#2fe0aa", "secondary": "#3247e2", "on-tertiary-fixed-variant": "#624000", "on-secondary": "#ffffff", "surface-container-low": "#f1f3ff", "error": "#ba1a1a", "primary-container": "#00d09c", "surface": "#f9f9ff", "background": "#f9f9ff", "on-background": "#181c24", "surface-tint": "#006c4f", "on-secondary-container": "#fffbff", "tertiary": "#815600", "on-secondary-fixed-variant": "#102bcd", "secondary-fixed": "#dfe0ff", "inverse-primary": "#2fe0aa", "on-surface": "#181c24", "secondary-container": "#4f63fb", "tertiary-fixed": "#ffddb1", "inverse-surface": "#2c303a", "tertiary-container": "#f5a814", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#291800", "on-primary-fixed-variant": "#00513b" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "1.5rem", "space-sm": "0.75rem", "space-2xs": "0.25rem", "container-max": "1280px", "gutter-mobile": "1rem", "space-3xl": "3rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-2xl": "2rem", "space-md": "1rem", "space-4xl": "4rem", "space-lg": "1.25rem" }, fontFamily: { "body-lg": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "numeric-metric-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "label-md": ["Inter"], "numeric-metric-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "title-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "title-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "numeric-metric-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "numeric-metric-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-lg": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs flex-shrink-0"><img alt="Groww Feedback Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VZsgXVeWlfXB67KP2TYn5CAdTqx9Z6txI_7LgA3wmtNftd4Kuinw9dq4T76kUfaGvwZzYfBpmK-bALF8mRvkspRn0A8L9-V8FaInXtmMmkQg-API8_KrsVTOnbp-F54nE9VB0eZFzy8Xoe8Lw8QhK0f1ZjkHrKBgfN152RjfPARdeMpzS84LLBQc47hLe0Er29ziIgb0CoBsrDj1FG1hOzY_ak0ctq4UdciWoiogHcJ2IQ-KdVNX9Bqk2H"/><span class="font-title-md text-title-md text-on-surface tracking-tight hidden xs:inline">Intelligence</span></div><div class="flex items-center gap-space-xs"><button class="h-9 px-space-sm rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-space-2xs text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span><span class="font-label-md text-label-md font-semibold text-on-surface">Week 42, 2024</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></button><button aria-label="Search" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="flex-shrink-0 ml-space-2xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOxPyBqE9lHbgAkcuCSifIs0JXzGhrQ7wSJlmYZIciRMHkTZ7jzroLhJk2SqSOtogX2DpvJL0g-SQw8xaS09xW_nIYlvOlqm9QPph_VgALVPbbbQwteBv2Tg8VXb05MhXiBhYr3Qom3yv2HXqmD_veyz-aETn7MUpXMFHxGGD6SbBd1wU3xaColmyblt1I36qyeorNueQQV0dVfzhsFa9_5ylbWDXB0O0XrmUd5XtFlHvEIaKnT2OLpA"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface px-gutter-mobile"><div class="flex flex-col w-full">
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-20 right-6 z-50 transform translate-y-12 opacity-0 pointer-events-none transition-all duration-300 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-xs font-label-md text-label-md" id="executive-toast">
+<span class="material-symbols-outlined text-[18px] text-primary-container" id="toast-icon">check_circle</span>
+<span id="toast-message">Report exported successfully.</span>
+</div>
+<!-- Executive Control & Meta Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md pb-space-lg mb-space-lg">
+<div class="flex flex-col gap-space-2xs min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Confidential • Executive Pulse
+        </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Groww Customer Intelligence Synthesis</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Weekly Executive Pulse <span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">• Week 42, 2024 (Oct 14 – Oct 20)</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        High-conviction 3-minute leadership synthesis aggregating app store sentiment, friction telemetry, and strategic product levers across retail trading and wealth cohorts.
+      </p>
+</div>
+<!-- Quick Actions & Presentation / Dark Toggle -->
+<div class="flex items-center gap-space-xs flex-wrap flex-shrink-0">
+<button class="h-10 px-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-space-2xs transition-all shadow-sm" id="theme-toggle-btn" onclick="toggleExecutiveTheme()" title="Toggle Theme">
+<span class="material-symbols-outlined text-[20px] text-primary" id="theme-icon">dark_mode</span>
+<span class="font-label-md text-label-md font-semibold" id="theme-label">Dark Mode</span>
+</button>
+<button class="h-10 px-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-space-2xs transition-all shadow-sm" onclick="triggerAction('Slack digest triggered to #leadership-digest', 'send')">
+<span class="material-symbols-outlined text-[18px] text-secondary">forum</span>
+<span class="font-label-md text-label-md font-semibold hidden sm:inline">#leadership-digest</span>
+</button>
+<button class="h-10 px-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-space-2xs transition-all shadow-sm" onclick="triggerAction('Generating executive PDF report bundle...', 'picture_as_pdf')">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="font-label-md text-label-md font-semibold">PDF One-Pager</span>
+</button>
+<button class="h-10 px-space-md rounded-xl bg-primary text-on-primary hover:bg-on-primary-container flex items-center gap-space-2xs transition-all shadow-sm" id="presentation-btn" onclick="enterPresentationMode()">
+<span class="material-symbols-outlined text-[18px]">slideshow</span>
+<span class="font-label-md text-label-md font-semibold">Presentation Mode</span>
+</button>
+</div>
+</div>
+<!-- Key Pulse Vitals: High Density Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-2xl">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Reviews Synthesized</span>
+<span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-numeric-metric-lg text-numeric-metric-lg text-on-surface">14,820</div>
+<div class="flex items-center gap-space-2xs mt-1">
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +14.2% WoW
+          </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">vs 12.9k prev wk</span>
+</div>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+        Play Store (68%) &amp; App Store (32%)
+      </div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Net Sentiment Index</span>
+<span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sentiment_very_satisfied</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-numeric-metric-lg text-numeric-metric-lg text-on-surface">+68 <span class="font-headline-sm text-headline-sm font-normal text-on-surface-variant">/ 100</span></div>
+<div class="flex items-center gap-space-2xs mt-1">
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +26 pts QoQ
+          </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">All-time high</span>
+</div>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        Benchmark: Indian FinTech Avg (+42)
+      </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">System Health Score</span>
+<span class="w-8 h-8 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">health_and_safety</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-numeric-metric-lg text-numeric-metric-lg text-on-surface">8.4 <span class="font-headline-sm text-headline-sm font-normal text-on-surface-variant">/ 10</span></div>
+<div class="flex items-center gap-space-2xs mt-1">
+<span class="px-1.5 py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> -0.3 pts WoW
+          </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">dragged by KYC drop</span>
+</div>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+        Target SLA threshold: ≥ 8.5
+      </div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Critical Issues Surfaced</span>
+<span class="w-8 h-8 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+</span>
+</div>
+<div class="my-space-xs">
+<div class="font-numeric-metric-lg text-numeric-metric-lg text-on-surface">2 <span class="font-body-md text-body-md font-normal text-on-surface-variant">P0 Blockers</span></div>
+<div class="flex items-center gap-space-2xs mt-1">
+<span class="px-1.5 py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-semibold flex items-center">
+            KYC Camera &amp; eNACH
+          </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Requires client patch</span>
+</div>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+        Mitigation actions drafted below
+      </div>
+</div>
+</div>
+<!-- SECTION 1: TOP THEMES (Executive Deep Dive) -->
+<section class="mb-space-3xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-md gap-space-xs">
+<div>
+<div class="flex items-center gap-space-2xs">
+<span class="text-primary font-headline-sm font-bold">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Top Conversational Themes</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Analyzed over 14.8k user touchpoints. Sorted by overall conversational volume share and WoW velocity.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Positive (&gt;70%)
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Mixed (40-70%)
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Negative (&gt;60%)
+        </span>
+</div>
+</div>
+<!-- Themes Matrix Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Theme 1: High Volume / High Delight -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-lg bg-primary/10 text-primary font-title-md text-title-md flex items-center justify-center font-bold">#1</span>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">UPI Payout Latency &amp; Instant Settlement</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Payments &amp; Fund Management</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +18% WoW
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Heavy praise for sub-5-second wallet withdrawals directly into HDFC, ICICI, and Axis accounts. Replaced traditional T+1 withdrawal skepticism with instant trust.
+          </p>
+<!-- Metrics bar -->
+<div class="space-y-space-xs">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface font-medium">34% conversational share (5,038 reviews)</span>
+<span class="text-primary font-bold">78% Positive Sentiment</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-primary-container h-full rounded-l-full" style="width: 78%;"></div>
+<div class="bg-surface-container-highest h-full" style="width: 14%;"></div>
+<div class="bg-error/70 h-full rounded-r-full" style="width: 8%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">verified</span> Primary Growth Flywheel
+            </span>
+</div>
+<span>Mean review score: 4.8 / 5.0</span>
+</div>
+</div>
+<!-- Theme 2: High Spike / Critical Pain -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-lg bg-error/10 text-error font-title-md text-title-md flex items-center justify-center font-bold">#2</span>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Aadhaar / Digilocker KYC Drop-offs</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">User Onboarding &amp; Compliance</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error/10 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> +45% Spike
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Critical drop-off on iOS 18 release candidates and Android 14 camera permission intents. Live selfie camera stream freezes black; OTP auto-read fails.
+          </p>
+<!-- Metrics bar -->
+<div class="space-y-space-xs">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface font-medium">22% share (3,260 reviews)</span>
+<span class="text-error font-bold">84% Critical Negative</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-error h-full rounded-l-full" style="width: 84%;"></div>
+<div class="bg-surface-container-highest h-full" style="width: 10%;"></div>
+<div class="bg-primary-container h-full rounded-r-full" style="width: 6%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span> High Executive Severity
+          </span>
+<span>Conversion Impact: -4.2%</span>
+</div>
+</div>
+<!-- Theme 3: High Delight Trader Experience -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-md bg-secondary/10 text-secondary font-title-md text-title-md flex items-center justify-center font-bold">#3</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Options Chain v2 &amp; Greeks</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">+62% WoW</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Active NIFTY/BANKNIFTY scalpers are celebrating instant implied volatility updates and Delta/Gamma visualization tabs.
+          </p>
+<div class="space-y-1">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface">19% share (2,815)</span>
+<span class="text-primary font-bold">89% High Delight</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 89%;"></div>
+<div class="bg-error/60 h-full" style="width: 11%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm text-body-sm font-body-sm text-on-surface-variant flex items-center justify-between">
+<span class="text-secondary font-medium">F&amp;O Retention +18%</span>
+<span>Rating: 4.9/5</span>
+</div>
+</div>
+<!-- Theme 4: Mandate & SIP Friction -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-md bg-error/10 text-error font-title-md text-title-md flex items-center justify-center font-bold">#4</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">SIP Auto-Debit &amp; Mandates</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-sm text-label-sm font-semibold">+32% WoW</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Weekend auto-debit trigger sync failures with SBI &amp; PNB banking gateways causing ghost pending statuses and cancelled installments.
+          </p>
+<div class="space-y-1">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface">14% share (2,074)</span>
+<span class="text-error font-bold">71% Negative</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-error h-full" style="width: 71%;"></div>
+<div class="bg-primary-container h-full" style="width: 29%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm text-body-sm font-body-sm text-on-surface-variant flex items-center justify-between">
+<span class="text-error font-medium">Risk: Mandate drop-outs</span>
+<span>Rating: 2.1/5</span>
+</div>
+</div>
+<!-- Theme 5: Performance at Market Open -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-md bg-tertiary/10 text-tertiary font-title-md text-title-md flex items-center justify-center font-bold">#5</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Candlestick Chart Smoothness</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">-8% WoW</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Occasional frame stutter and 1.5s tick buffer lag during the 9:15 AM market opening bell surge on mobile 5G connections.
+          </p>
+<div class="space-y-1">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface">11% share (1,633)</span>
+<span class="text-tertiary font-bold">54% Mixed / Neutral</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container flex overflow-hidden">
+<div class="bg-tertiary-container h-full" style="width: 54%;"></div>
+<div class="bg-primary-container h-full" style="width: 26%;"></div>
+<div class="bg-error/60 h-full" style="width: 20%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm text-body-sm font-body-sm text-on-surface-variant flex items-center justify-between">
+<span class="text-on-surface-variant font-medium">Hardware: Android budget tiers</span>
+<span>Rating: 3.4/5</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: REAL USER QUOTES (Unfiltered Ground Truth) -->
+<section class="mb-space-3xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-md gap-space-xs">
+<div>
+<div class="flex items-center gap-space-2xs">
+<span class="text-primary font-headline-sm font-bold">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Ground Truth: Real User Verbatims</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Curated verbatim feedback from high-LTV cohorts, verified accounts, and critical onboarding churn points.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+          Filtered: 5 High-Impact Signals
+        </span>
+</div>
+</div>
+<!-- Quotes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Quote 1: SIP Delight -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+              Delight • SIP Auto-wealth
+            </span>
+<div class="flex text-tertiary-container text-[14px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-md">
+            “Groww's 1-click SIP pause feature saved my monthly budget planning. Flawless UI and zero unnecessary paperwork!”
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-title-md text-title-md flex items-center justify-center font-bold">R</span>
+<span class="font-semibold text-on-surface">Rahul S.</span>
+<span class="text-primary material-symbols-outlined text-[14px]" title="Verified Investor">verified</span>
+</div>
+<span class="font-label-sm text-label-sm">Google Play</span>
+</div>
+</div>
+<!-- Quote 2: KYC Critical -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between bg-gradient-to-br from-surface-container-lowest via-error-container/10 to-surface-container-lowest">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">error</span> Critical Blocker • KYC
+            </span>
+<div class="flex text-tertiary-container text-[14px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-md font-medium">
+            “KYC keeps rejecting my Aadhaar OTP despite correct details. The camera screen just turns pitch black. Please fix urgently!”
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="w-6 h-6 rounded-full bg-error/20 text-error font-title-md text-title-md flex items-center justify-center font-bold">P</span>
+<span class="font-semibold text-on-surface">Priya M.</span>
+<span class="text-error font-label-sm text-label-sm">Drop-off point</span>
+</div>
+<span class="font-label-sm text-label-sm">iOS App Store</span>
+</div>
+</div>
+<!-- Quote 3: F&O Candlestick -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+              Mixed • Derivatives Latency
+            </span>
+<div class="flex text-tertiary-container text-[14px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-md">
+            “Great stock charts and indicator choices, but candlesticks reload too slowly during market open on mobile 5G.”
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="w-6 h-6 rounded-full bg-tertiary/20 text-tertiary font-title-md text-title-md flex items-center justify-center font-bold">V</span>
+<span class="font-semibold text-on-surface">Vikram K.</span>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">F&amp;O Active Trader</span>
+</div>
+<span class="font-label-sm text-label-sm">Google Play</span>
+</div>
+</div>
+<!-- Quote 4: Instant UPI Settlement -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+              Delight • Fast Settlement
+            </span>
+<div class="flex text-tertiary-container text-[14px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-md">
+            “Instant withdrawal to HDFC in literally 4 seconds flat. Faster than any legacy broker in India right now.”
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-title-md text-title-md flex items-center justify-center font-bold">A</span>
+<span class="font-semibold text-on-surface">Ananya D.</span>
+<span class="text-primary material-symbols-outlined text-[14px]" title="Verified Investor">verified</span>
+</div>
+<span class="font-label-sm text-label-sm">iOS App Store</span>
+</div>
+</div>
+<!-- Quote 5: Bank Mandate Friction -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between lg:col-span-2">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-semibold">
+              Friction • eNACH Auto-Debit
+            </span>
+<div class="flex text-tertiary-container text-[14px]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-md">
+            “eNACH bank mandate got rejected twice with SBI. Now account shows mandate pending and blocks fresh SIP setup without giving any retry option.”
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="w-6 h-6 rounded-full bg-outline-variant/30 text-on-surface font-title-md text-title-md flex items-center justify-center font-bold">H</span>
+<span class="font-semibold text-on-surface">Harish B.</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Mutual Funds Investor</span>
+</div>
+<span class="font-label-sm text-label-sm">Google Play</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: THREE HIGH-LEVERAGE ACTION IDEAS -->
+<section class="mb-space-2xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-md gap-space-xs">
+<div>
+<div class="flex items-center gap-space-2xs">
+<span class="text-primary font-headline-sm font-bold">03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Leadership Action Levers</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Prioritized execution blueprints grounded directly in the synthesized customer signals.
+        </p>
+</div>
+<div class="flex items-center gap-space-2xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Commitments for Sprint 43</span>
+</div>
+</div>
+<!-- Action Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Action 1: P0 KYC Fix -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2.5 py-1 rounded bg-error/10 text-error font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              P0 Critical • Engineering &amp; KYC
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+              High Impact / Low Effort
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">
+            Aadhaar Camera Fallback &amp; Direct Digilocker SDK Patch
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+            Eliminates the 3,260 drop-offs recorded this week triggered by iOS 18 camera stream freeze and Android 14 OTP sync timeouts.
+          </p>
+<!-- Action Specifics -->
+<div class="space-y-space-xs p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase">Concrete Next Step:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                Ship client hotfix <strong>v24.10.2</strong> fallback to native OS camera intent + Digilocker webview fallback bypass.
+              </p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Target Metric:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                Reduce KYC drop-off by <strong>65% within 7 days</strong> (~1,200 onboardings/week saved).
+              </p>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px] text-error">person</span>
+<span>DRI: <strong>Ankit R.</strong> (Staff iOS)</span>
+</div>
+<button class="h-8 px-space-xs rounded bg-error/10 hover:bg-error text-error hover:text-on-error font-label-sm text-label-sm font-semibold transition-all" onclick="triggerAction('Task assigned to Ankit R. in Jira sprint #43', 'assignment_turned_in')">
+            Assign DRI
+          </button>
+</div>
+</div>
+<!-- Action 2: Trading WebGL Canvas -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2.5 py-1 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              P1 Growth • Trading Squad
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+              High Impact / Med Effort
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">
+            Pre-render Market Open Candlestick WebGL Canvas
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+            Directly answers trader friction during peak 9:15 AM market opening surge when ticker tick volume spikes 8x standard rates.
+          </p>
+<!-- Action Specifics -->
+<div class="space-y-space-xs p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase">Concrete Next Step:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                Decouple WebSocket tick buffer from DOM paint; implement canvas-level double buffering during opening bell.
+              </p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Target Metric:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                Maintain steady <strong>60 FPS</strong> chart panning; lift F&amp;O App Store CSAT from 3.8 to 4.5.
+              </p>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">person</span>
+<span>DRI: <strong>Devendra P.</strong> (Trading Lead)</span>
+</div>
+<button class="h-8 px-space-xs rounded bg-secondary/10 hover:bg-secondary text-secondary hover:text-on-secondary font-label-sm text-label-sm font-semibold transition-all" onclick="triggerAction('Task assigned to Devendra P. in Jira sprint #43', 'assignment_turned_in')">
+            Assign DRI
+          </button>
+</div>
+</div>
+<!-- Action 3: Smart Mandate Retry Engine -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2.5 py-1 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              P1 Reliability • Payments Squad
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+              High Impact / Low Effort
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">
+            Smart Retry Engine for NPCI Bank Mandates
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+            Eliminates weekend auto-debit drops across SBI and PSU partner banks that cause erroneous account lockouts.
+          </p>
+<!-- Action Specifics -->
+<div class="space-y-space-xs p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase">Concrete Next Step:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                Introduce intelligent off-peak retry scheduling (04:00 AM non-blocking queue) with proactive WhatsApp notification.
+              </p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Target Metric:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                Decrease mandate bounce-back from 14% to <strong>&lt;2.5%</strong>; protect ₹18Cr weekly SIP volume.
+              </p>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px] text-primary">person</span>
+<span>DRI: <strong>Sneha M.</strong> (Payments PM)</span>
+</div>
+<button class="h-8 px-space-xs rounded bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-label-sm font-semibold transition-all" onclick="triggerAction('Task assigned to Sneha M. in Jira sprint #43', 'assignment_turned_in')">
+            Assign DRI
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Executive Sign-off & Audit Strip -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span>Synthesis generated automatically via Groww LLM Pipeline • Confidence Score: <strong>99.4%</strong></span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Next Executive Refresh: <strong>Monday, 08:00 AM IST</strong></span>
+<button class="text-primary hover:underline font-label-md text-label-md font-semibold flex items-center gap-1" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        Back to Top <span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Executive Theme Toggle Support (seamless class toggle on documentElement)
+  function toggleExecutiveTheme() {
+    const htmlEl = document.documentElement;
+    const isDark = htmlEl.classList.toggle('dark');
+    const icon = document.getElementById('theme-icon');
+    const label = document.getElementById('theme-label');
+
+    if (isDark) {
+      icon.textContent = 'light_mode';
+      label.textContent = 'Light Mode';
+      showToast('Switched to Executive Dark Canvas', 'dark_mode');
+    } else {
+      icon.textContent = 'dark_mode';
+      label.textContent = 'Dark Mode';
+      showToast('Switched to Executive Light Canvas', 'light_mode');
+    }
+  }
+
+  // Interactive Presentation Mode
+  let isPresentation = false;
+  function enterPresentationMode() {
+    isPresentation = !isPresentation;
+    const btn = document.getElementById('presentation-btn');
+    if (isPresentation) {
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      btn.classList.add('bg-secondary', 'text-on-secondary');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">fullscreen_exit</span><span class="font-label-md text-label-md font-semibold">Exit Presentation</span>';
+      showToast('Presentation Mode Active: Optimized for boardroom projection', 'present_to_all');
+      document.body.classList.add('scale-[1.01]', 'transition-transform');
+    } else {
+      btn.classList.remove('bg-secondary', 'text-on-secondary');
+      btn.classList.add('bg-primary', 'text-on-primary');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">slideshow</span><span class="font-label-md text-label-md font-semibold">Presentation Mode</span>';
+      showToast('Returned to Executive Digest View', 'check_circle');
+      document.body.classList.remove('scale-[1.01]');
+    }
+  }
+
+  // Quick Action Notification Toast
+  function triggerAction(message, iconName) {
+    showToast(message, iconName || 'check_circle');
+  }
+
+  function showToast(message, iconName) {
+    const toast = document.getElementById('executive-toast');
+    const msgEl = document.getElementById('toast-message');
+    const iconEl = document.getElementById('toast-icon');
+
+    msgEl.textContent = message;
+    if (iconName) iconEl.textContent = iconName;
+
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-12');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-12');
+    }, 3200);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary bg-primary/10 font-semibold"><div class="flex items-center justify-between h-16 px-space-xs"><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span class="font-label-sm text-label-sm truncate">Dashboard</span></a><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="trends-and-themes" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span><span class="font-label-sm text-label-sm truncate">Trends</span></a><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="product-areas" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-label-sm text-label-sm truncate">Areas</span></a><a aria-current="page" class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 transition-all text-primary bg-primary/10 font-semibold" data-path="admin-controls" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-sm text-label-sm truncate">Admin</span></a><a class="flex-1 min-w-[56px] h-12 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="logs-and-history" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-label-sm text-label-sm truncate">Logs</span></a></div></nav></body></html>

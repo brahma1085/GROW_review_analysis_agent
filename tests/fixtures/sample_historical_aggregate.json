@@ -1,0 +1,63 @@
+﻿{
+  "run_id": "run_previous_123",
+  "app_id": "com.nextbillion.groww",
+  "reporting_period": {
+    "start_date": "2026-08-24T00:00:00",
+    "end_date": "2026-08-30T23:59:59"
+  },
+  "metrics": {
+    "reviews_analyzed": 50,
+    "avg_star_rating": 4.1,
+    "sentiment_distribution": {
+      "positive_count": 30,
+      "neutral_count": 5,
+      "negative_count": 15,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 60.0,
+        "neutral": 10.0,
+        "negative": 30.0,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 5,
+    "emerging_count": 1,
+    "critical_high_count": 2,
+    "rating_distribution": {
+      "1": 10,
+      "2": 2,
+      "3": 3,
+      "4": 5,
+      "5": 30
+    }
+  },
+  "themes": [
+    {
+      "id": "t_old_1",
+      "name": "App Crashes on Portfolio Open",
+      "description": "Users are reporting that the app crashes.",
+      "review_count": 5,
+      "review_percentage": 10.0,
+      "sentiment_distribution": {
+        "positive_count": 0,
+        "neutral_count": 0,
+        "negative_count": 5,
+        "mixed_count": 0,
+        "percentages": {
+          "positive": 0.0,
+          "neutral": 0.0,
+          "negative": 100.0,
+          "mixed": 0.0
+        }
+      },
+      "product_area": "trading",
+      "severity": "high",
+      "review_ids": ["old1", "old2"],
+      "is_recurring": true,
+      "is_emerging": false,
+      "recommended_action": "Investigate"
+    }
+  ],
+  "doc_url": null,
+  "gmail_draft_id": null
+}

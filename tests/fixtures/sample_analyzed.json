@@ -1,0 +1,34 @@
+{
+  "analyzed_reviews": [
+    {
+      "review_id": "r1",
+      "categories": ["bug_report", "ui_ux"],
+      "sentiment": "negative",
+      "sentiment_confidence": 0.95,
+      "product_area": "trading",
+      "severity": "high",
+      "intent": "report_bug",
+      "key_phrases": ["App crashes", "open my portfolio"]
+    },
+    {
+      "review_id": "r2",
+      "categories": ["praise", "ui_ux"],
+      "sentiment": "positive",
+      "sentiment_confidence": 0.99,
+      "product_area": "trading",
+      "severity": "low",
+      "intent": "praise",
+      "key_phrases": ["Best trading app", "Very easy to use"]
+    },
+    {
+      "review_id": "r3",
+      "categories": ["account_issues"],
+      "sentiment": "negative",
+      "sentiment_confidence": 0.9,
+      "product_area": "other",
+      "severity": "medium",
+      "intent": "complaint",
+      "key_phrases": ["can't add money", "keeps saying failed"]
+    }
+  ]
+}

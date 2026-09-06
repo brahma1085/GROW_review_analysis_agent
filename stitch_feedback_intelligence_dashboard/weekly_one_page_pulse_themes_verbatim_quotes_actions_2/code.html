@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Weekly Executive Pulse | Groww INTEL Mobile</title>
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#00D09C',
+              light: '#E6FBF5',
+              dark: '#00A87E',
+              glow: 'rgba(0, 208, 156, 0.15)'
+            },
+            danger: {
+              DEFAULT: '#EB5757',
+              light: '#FDF2F2',
+              surface: 'rgba(235, 87, 87, 0.08)'
+            },
+            warning: {
+              DEFAULT: '#F2994A',
+              light: '#FEF6EE'
+            },
+            darkbg: {
+              base: '#0B0F19',
+              card: '#131B2E',
+              subtle: '#1C2640',
+              border: '#243252'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="base-layout">
+    body {
+      -webkit-tap-highlight-color: transparent;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    /* Smooth transition for theme toggle */
+    body, .theme-transition {
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+    /* Hide scrollbar for clean horizontal scrolls */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-[#F6F8FA] dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 min-h-screen pb-24 font-sans selection:bg-emerald-500 selection:text-white">
+<!-- BEGIN: TopAppHeader -->
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-[#0B0F19]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-darkbg-border px-4 py-2.5 transition-colors">
+<div class="max-w-md mx-auto flex items-center justify-between gap-2">
+<!-- Groww INTEL Logo -->
+<div class="flex items-center space-x-1.5 flex-shrink-0" data-purpose="brand-logo">
+<div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center shadow-sm">
+<svg class="w-4 h-4 text-white stroke-[3]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex items-baseline leading-none pl-0.5">
+<span class="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">Groww</span>
+<span class="ml-1 text-[11px] font-bold tracking-wider text-[#00D09C] uppercase">INTEL</span>
+</div>
+</div>
+<!-- Controls: Date Badge, Theme Toggle & Avatar -->
+<div class="flex items-center space-x-2">
+<!-- Week Badge Pill -->
+<button class="flex items-center gap-1 text-[11px] font-medium bg-slate-100 dark:bg-darkbg-subtle text-slate-700 dark:text-slate-300 px-2 py-1 rounded-md border border-slate-200/80 dark:border-darkbg-border active:scale-95 transition-transform" type="button">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>W42, '24</span>
+</button>
+<!-- Dark/Light Theme Toggle -->
+<button aria-label="Toggle Dark Mode" class="p-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-darkbg-subtle border border-transparent dark:border-darkbg-border active:rotate-12 transition-all" data-purpose="dark-mode-toggle" id="themeToggleBtn">
+<!-- Sun Icon for Dark Mode -->
+<svg class="w-4 h-4 hidden dark:block text-amber-400" fill="currentColor" id="sunIcon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+<!-- Moon Icon for Light Mode -->
+<svg class="w-4 h-4 block dark:hidden text-slate-700" fill="currentColor" id="moonIcon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+</button>
+<!-- Executive Avatar -->
+<div class="relative flex-shrink-0" data-purpose="executive-avatar">
+<img alt="Executive Profile" class="w-8 h-8 rounded-full object-cover border border-emerald-500/50 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1WOIZ7FtDM3RkH_4q4hDtrl9TI22iTc1685AHm3P-jgaiByEHW8w3HuKOahbrdjSMF53TE5SFa9VG6j41GQzk2Qvk2pHjPSOPeaUgmxPEXLhQW1Y2EDVs9UseoSc2onGCZ_iB5SCyT66Nqpcyi94xXomuy5DlVd-5Bh7PNgzdnAuQWov0Y0Vf6aL9e89AIjWWQNTvP6mfs7sS5dXR8D6B45QLxxjM1seVblNI1YjBIRgLHMv20wi12VLQK5"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-brand border-2 border-white dark:border-[#0B0F19] rounded-full"></span>
+</div>
+</div>
+</div>
+</header>
+<!-- END: TopAppHeader -->
+<!-- BEGIN: MainContent -->
+<main class="max-w-md mx-auto px-4 pt-3.5 space-y-4">
+<!-- BEGIN: ExecutivePulseSummary -->
+<section class="space-y-2.5" data-purpose="executive-overview">
+<!-- Tag pill & sync indicator -->
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/50">
+<span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span>
+          Confidential • Executive Pulse
+        </span>
+<span class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Oct 14 – 20, 2024</span>
+</div>
+<!-- Headline -->
+<div>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+          Weekly Executive Pulse
+        </h1>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+          High-conviction 3-minute leadership synthesis aggregating app store sentiment, friction telemetry, and strategic product levers.
+        </p>
+</div>
+<!-- Horizontal Quick Actions Bar -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-1 pb-0.5" data-purpose="quick-actions">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-darkbg-card border border-slate-200 dark:border-darkbg-border text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap active:bg-slate-50" href="#leadership-digest">
+<svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          #leadership-digest
+        </a>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-darkbg-card border border-slate-200 dark:border-darkbg-border text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap active:bg-slate-50">
+<svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          PDF One-Pager
+        </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm whitespace-nowrap active:scale-95 transition-transform">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Presentation
+        </button>
+</div>
+</section>
+<!-- END: ExecutivePulseSummary -->
+<!-- BEGIN: KeyMetricsGrid -->
+<section class="grid grid-cols-2 gap-2.5" data-purpose="metrics-grid">
+<!-- Metric 1: Reviews Synthesized -->
+<div class="bg-white dark:bg-darkbg-card p-3 rounded-xl border border-slate-200/90 dark:border-darkbg-border shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+<span class="text-[11px] font-medium leading-tight">Reviews Synthesized</span>
+<span class="p-1 rounded-md bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</div>
+<div class="mt-2">
+<div class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">14,820</div>
+<div class="flex items-center text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">
+<svg class="w-3 h-3 mr-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+            +14.2% WoW
+          </div>
+<p class="text-[10px] text-slate-400 dark:text-slate-400 mt-1 truncate">Play 68% • App Store 32%</p>
+</div>
+</div>
+<!-- Metric 2: Net Sentiment Index -->
+<div class="bg-white dark:bg-darkbg-card p-3 rounded-xl border border-slate-200/90 dark:border-darkbg-border shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+<span class="text-[11px] font-medium leading-tight">Net Sentiment</span>
+<span class="p-1 rounded-md bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">+68</span>
+<span class="text-xs text-slate-400">/100</span>
+</div>
+<div class="flex items-center text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">
+<svg class="w-3 h-3 mr-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+            +26 pts QoQ
+          </div>
+<p class="text-[10px] text-slate-400 dark:text-slate-400 mt-1 truncate">InFinTech Avg (+42)</p>
+</div>
+</div>
+<!-- Metric 3: System Health Score -->
+<div class="bg-white dark:bg-darkbg-card p-3 rounded-xl border border-slate-200/90 dark:border-darkbg-border shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+<span class="text-[11px] font-medium leading-tight">System Health</span>
+<span class="p-1 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">8.4</span>
+<span class="text-xs text-slate-400">/10</span>
+</div>
+<div class="flex items-center text-[10px] font-semibold text-rose-500 mt-0.5">
+<svg class="w-3 h-3 mr-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+            -0.3 pts WoW
+          </div>
+<p class="text-[10px] text-slate-400 dark:text-slate-400 mt-1 truncate">SLA Goal: ≥ 8.5</p>
+</div>
+</div>
+<!-- Metric 4: Critical Issues Surfaced -->
+<div class="bg-white dark:bg-darkbg-card p-3 rounded-xl border border-rose-200 dark:border-rose-950/70 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-slate-500 dark:text-slate-400">
+<span class="text-[11px] font-medium leading-tight">Critical Surfaced</span>
+<span class="p-1 rounded-md bg-rose-50 dark:bg-rose-950/50 text-rose-500">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1.5">
+<span class="text-xl font-bold tracking-tight text-rose-600 dark:text-rose-400">2</span>
+<span class="text-[11px] font-semibold text-rose-700 dark:text-rose-300">P0 Blockers</span>
+</div>
+<div class="text-[10px] text-rose-600 dark:text-rose-300/80 font-medium mt-0.5 truncate">
+            KYC Camera &amp; eNACH
+          </div>
+<p class="text-[10px] text-slate-400 dark:text-slate-400 mt-1 truncate">Fix deployed in sprint</p>
+</div>
+</div>
+</section>
+<!-- END: KeyMetricsGrid -->
+<!-- BEGIN: Section01Themes -->
+<section class="space-y-3" data-purpose="top-themes-section">
+<div class="flex items-center justify-between pt-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-xs font-bold text-brand uppercase tracking-wider">01</span>
+<h2 class="text-base font-bold text-slate-900 dark:text-white">Top Conversational Themes</h2>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">Sorted by volume share &amp; velocity</p>
+</div>
+<!-- Mini Legend -->
+<div class="flex items-center gap-2 text-[10px] font-medium text-slate-500 dark:text-slate-400">
+<span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Pos</span>
+<span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-rose-500"></span>Neg</span>
+</div>
+</div>
+<!-- Theme Card 1 -->
+<article class="bg-white dark:bg-darkbg-card p-3.5 rounded-xl border border-slate-200/90 dark:border-darkbg-border shadow-sm space-y-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="text-xs font-black text-slate-400 dark:text-slate-500">#1</span>
+<h3 class="text-xs font-bold text-slate-900 dark:text-white leading-snug">UPI Payout Latency &amp; Instant Settlement</h3>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 flex-shrink-0">
+            +18% WoW
+          </span>
+</div>
+<p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+          Heavy praise for sub-5-second wallet withdrawals directly into HDFC, ICICI, and Axis accounts. Replaced traditional T+1 withdrawal skepticism with instant trust.
+        </p>
+<!-- Progress / Sentiment distribution bar -->
+<div>
+<div class="flex justify-between text-[10px] font-medium text-slate-500 dark:text-slate-400 mb-1">
+<span>34% share (5,038 reviews)</span>
+<span class="font-bold text-emerald-600 dark:text-emerald-400">78% Positive</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
+<div class="bg-[#00D09C] h-full" style="width: 78%"></div>
+<div class="bg-amber-400 h-full" style="width: 14%"></div>
+<div class="bg-rose-500 h-full" style="width: 8%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[10px] pt-0.5 text-slate-500 dark:text-slate-400">
+<span class="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Primary Growth Flywheel
+          </span>
+<span>Score: 4.8 / 5.0</span>
+</div>
+</article>
+<!-- Theme Card 2 -->
+<article class="bg-white dark:bg-darkbg-card p-3.5 rounded-xl border border-rose-200/80 dark:border-rose-900/40 shadow-sm space-y-2 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-rose-500"></div>
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 pl-1">
+<span class="text-xs font-black text-rose-400">#2</span>
+<h3 class="text-xs font-bold text-slate-900 dark:text-white leading-snug">Aadhaar / Digilocker KYC Drop-offs</h3>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-900 flex-shrink-0">
+            ! +45% Spike
+          </span>
+</div>
+<p class="text-[11px] text-slate-600 dark:text-slate-300 pl-1 leading-relaxed">
+          Critical drop-off on iOS 18 release candidates and Android 14 camera permission intents. Live selfie camera stream freezes black; OTP auto-read fails.
+        </p>
+<!-- Bar -->
+<div class="pl-1">
+<div class="flex justify-between text-[10px] font-medium text-slate-500 dark:text-slate-400 mb-1">
+<span>22% share (3,260 reviews)</span>
+<span class="font-bold text-rose-600 dark:text-rose-400">84% Negative</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
+<div class="bg-rose-500 h-full" style="width: 84%"></div>
+<div class="bg-amber-400 h-full" style="width: 10%"></div>
+<div class="bg-[#00D09C] h-full" style="width: 6%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[10px] pt-0.5 pl-1 text-slate-500 dark:text-slate-400">
+<span class="text-rose-600 dark:text-rose-400 font-semibold flex items-center gap-1">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            High Executive Severity
+          </span>
+<span class="font-bold text-rose-500">Conv. Impact: -4.2%</span>
+</div>
+</article>
+<!-- Compact Theme Cards 3, 4, 5 in Horizontal Snap Slider or Stack -->
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Theme 3 -->
+<article class="bg-white dark:bg-darkbg-card p-3 rounded-xl border border-slate-200/90 dark:border-darkbg-border flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="text-[11px] font-bold text-slate-400">#3</span>
+<span class="text-xs font-bold text-slate-900 dark:text-white">Options Chain v2 &amp; Greeks</span>
+<span class="text-[10px] font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 px-1 rounded">+62% WoW</span>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">19% share • 89% High Delight</p>
+</div>
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">4.9 ★</span>
+</article>
+<!-- Theme 4 -->
+<article class="bg-white dark:bg-darkbg-card p-3 rounded-xl border border-slate-200/90 dark:border-darkbg-border flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="text-[11px] font-bold text-slate-400">#4</span>
+<span class="text-xs font-bold text-slate-900 dark:text-white">SIP Auto-Debit &amp; Mandates</span>
+<span class="text-[10px] font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/40 px-1 rounded">+32% WoW</span>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">14% share • 71% Negative</p>
+</div>
+<span class="text-xs font-bold text-rose-500">2.1 ★</span>
+</article>
+<!-- Theme 5 -->
+<article class="bg-white dark:bg-darkbg-card p-3 rounded-xl border border-slate-200/90 dark:border-darkbg-border flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="text-[11px] font-bold text-slate-400">#5</span>
+<span class="text-xs font-bold text-slate-900 dark:text-white">Candlestick Chart Smoothness</span>
+<span class="text-[10px] font-semibold text-slate-500 bg-slate-100 dark:bg-slate-800 px-1 rounded">-8% WoW</span>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">11% share • 54% Mixed / Neutral</p>
+</div>
+<span class="text-xs font-bold text-amber-500">3.4 ★</span>
+</article>
+</div>
+</section>
+<!-- END: Section01Themes -->
+<!-- BEGIN: Section02Verbatims -->
+<section class="space-y-3 pt-2" data-purpose="user-verbatims-section">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-xs font-bold text-brand uppercase tracking-wider">02</span>
+<h2 class="text-base font-bold text-slate-900 dark:text-white">Real User Verbatims</h2>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">High-LTV cohorts &amp; onboarding friction</p>
+</div>
+<span class="text-[10px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-darkbg-subtle px-2 py-0.5 rounded-full border border-slate-200/60 dark:border-darkbg-border">
+          Latest 24h
+        </span>
+</div>
+<!-- Verbatim Card 1: Delight SIP -->
+<div class="bg-white dark:bg-darkbg-card p-3.5 rounded-xl border border-slate-200/90 dark:border-darkbg-border shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded">
+            Delight • SIP Auto-wealth
+          </span>
+<div class="flex text-amber-400 text-xs">★★★★★</div>
+</div>
+<p class="text-xs italic text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
+          “Groww's 1-click SIP pause feature saved my monthly budget planning. Flawless UI and zero unnecessary paperwork!”
+        </p>
+<div class="flex items-center justify-between text-[11px] pt-1 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-darkbg-subtle">
+<span class="font-medium text-slate-900 dark:text-slate-200 flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 inline-flex items-center justify-center text-[9px] font-bold">R</span>
+            Rahul S.
+          </span>
+<span class="inline-flex items-center gap-1 text-[10px]">
+<svg class="w-2.5 h-2.5 text-emerald-500" fill="currentColor" viewbox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.44 1.44 0 0 1-.225-.794V2.608c0-.3.082-.576.224-.794zm10.89 10.89l2.298 2.298-8.83 5.099 6.532-7.397zm0-1.408L7.967 3.899l8.83 5.099-2.298 2.298zm1.099.704l2.748-1.587c.966-.558.966-1.467 0-2.025l-2.748-1.587-2.062 2.6 2.062 2.599z"></path></svg>
+            Google Play
+          </span>
+</div>
+</div>
+<!-- Verbatim Card 2: Critical KYC Blocker -->
+<div class="bg-white dark:bg-darkbg-card p-3.5 rounded-xl border border-rose-200 dark:border-rose-900/50 shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/60 px-2 py-0.5 rounded">
+            Critical Blocker • KYC
+          </span>
+<div class="flex text-slate-300 dark:text-slate-600 text-xs">
+<span class="text-rose-500">★</span>☆☆☆☆
+          </div>
+</div>
+<p class="text-xs italic text-slate-800 dark:text-slate-200 leading-relaxed font-normal">
+          “KYC keeps rejecting my Aadhaar OTP despite correct details. The camera screen just turns pitch black. Please fix urgently!”
+        </p>
+<div class="flex items-center justify-between text-[11px] pt-1 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-darkbg-subtle">
+<span class="font-medium text-slate-900 dark:text-slate-200 flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-rose-100 text-rose-700 dark:bg-rose-900 dark:text-rose-300 inline-flex items-center justify-center text-[9px] font-bold">P</span>
+            Priya M. <span class="text-[9px] text-rose-500 font-semibold">• Drop-off</span>
+</span>
+<span class="inline-flex items-center gap-1 text-[10px]">
+<svg class="w-2.5 h-2.5 text-blue-500" fill="currentColor" viewbox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 7.17c.6-1.04 1.01-2.48.81-3.92-1.18.05-2.6 0.79-3.25 1.55-.58.67-.99 2.16-.8 3.56 1.33.1 2.64-.59 3.24-1.19z"></path></svg>
+            iOS App Store
+          </span>
+</div>
+</div>
+<!-- Verbatim Card 3: Mixed Trading Latency -->
+<div class="bg-white dark:bg-darkbg-card p-3.5 rounded-xl border border-slate-200/90 dark:border-darkbg-border shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded">
+            Mixed • Derivatives Latency
+          </span>
+<div class="flex text-amber-400 text-xs">
+            ★★★<span class="text-slate-300 dark:text-slate-600">☆☆</span>
+</div>
+</div>
+<p class="text-xs italic text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
+          “Great stock charts and indicator choices, but candlesticks reload too slowly during market open on mobile 5G.”
+        </p>
+<div class="flex items-center justify-between text-[11px] pt-1 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-darkbg-subtle">
+<span class="font-medium text-slate-900 dark:text-slate-200 flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 inline-flex items-center justify-center text-[9px] font-bold">V</span>
+            Vikram K. <span class="text-[9px] text-slate-400">• F&amp;O Trader</span>
+</span>
+<span class="inline-flex items-center gap-1 text-[10px]">
+            Google Play
+          </span>
+</div>
+</div>
+<!-- Verbatim Card 4: Fast Settlement -->
+<div class="bg-white dark:bg-darkbg-card p-3.5 rounded-xl border border-slate-200/90 dark:border-darkbg-border shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded">
+            Delight • Fast Settlement
+          </span>
+<div class="flex text-amber-400 text-xs">★★★★★</div>
+</div>
+<p class="text-xs italic text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
+          “Instant withdrawal to HDFC in literally 4 seconds flat. Faster than any legacy broker in India right now.”
+        </p>
+<div class="flex items-center justify-between text-[11px] pt-1 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-darkbg-subtle">
+<span class="font-medium text-slate-900 dark:text-slate-200 flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 inline-flex items-center justify-center text-[9px] font-bold">A</span>
+            Ananya D.
+          </span>
+<span class="inline-flex items-center gap-1 text-[10px]">
+            iOS App Store
+          </span>
+</div>
+</div>
+</section>
+<!-- END: Section02Verbatims -->
+<!-- BEGIN: Section03ActionLevers -->
+<section class="space-y-3 pt-2" data-purpose="leadership-actions">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-xs font-bold text-brand uppercase tracking-wider">03</span>
+<h2 class="text-base font-bold text-slate-900 dark:text-white">Leadership Action Levers</h2>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">Prioritized sprint commitments</p>
+</div>
+<span class="text-[10px] font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded border border-emerald-200/50">Sprint 43</span>
+</div>
+<!-- Action Blueprint 1 (P0 Critical) -->
+<div class="bg-white dark:bg-darkbg-card rounded-xl border border-rose-200 dark:border-rose-900/60 shadow-sm overflow-hidden">
+<div class="bg-rose-500/10 dark:bg-rose-950/30 px-3.5 py-1.5 border-b border-rose-100 dark:border-rose-900/40 flex items-center justify-between">
+<span class="text-[10px] font-bold text-rose-700 dark:text-rose-400 tracking-wider uppercase">P0 Critical • Engineering &amp; KYC</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">High Impact / Low Effort</span>
+</div>
+<div class="p-3.5 space-y-2.5">
+<h3 class="text-xs font-bold text-slate-900 dark:text-white leading-tight">
+            Aadhaar Camera Fallback &amp; Direct Digilocker SDK Patch
+          </h3>
+<p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+            Eliminates the 3,260 drop-offs recorded this week triggered by iOS 18 camera stream freeze and Android 14 OTP sync timeouts.
+          </p>
+<div class="p-2 rounded bg-slate-50 dark:bg-darkbg-subtle/50 text-[11px] space-y-1">
+<div class="text-slate-500 dark:text-slate-400"><strong class="text-slate-800 dark:text-slate-200">Concrete Next Step:</strong> Ship client hotfix <code class="text-xs text-rose-600 font-mono bg-rose-50 dark:bg-rose-900/40 px-1 rounded">v24.10.2</code> with native OS camera fallback.</div>
+<div class="text-emerald-700 dark:text-emerald-400 font-medium"><strong>Target Metric:</strong> Reduce KYC drop-off by 65% within 7 days (~1,200 onboardings saved).</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px]">
+<span class="text-slate-600 dark:text-slate-300 font-medium flex items-center gap-1">
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              DRI: Ankit R. (Staff iOS)
+            </span>
+<button class="text-[10px] font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-darkbg-subtle px-2 py-1 rounded border border-slate-200 dark:border-darkbg-border active:bg-slate-200">
+              Assign DRI
+            </button>
+</div>
+</div>
+</div>
+<!-- Action Blueprint 2 (P1 Growth) -->
+<div class="bg-white dark:bg-darkbg-card rounded-xl border border-blue-200 dark:border-blue-900/50 shadow-sm overflow-hidden">
+<div class="bg-blue-500/10 dark:bg-blue-950/30 px-3.5 py-1.5 border-b border-blue-100 dark:border-blue-900/40 flex items-center justify-between">
+<span class="text-[10px] font-bold text-blue-700 dark:text-blue-400 tracking-wider uppercase">P1 Growth • Trading Squad</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">High Impact / Med Effort</span>
+</div>
+<div class="p-3.5 space-y-2.5">
+<h3 class="text-xs font-bold text-slate-900 dark:text-white leading-tight">
+            Pre-render Market Open Candlestick WebGL Canvas
+          </h3>
+<p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+            Directly answers trader friction during 9:15 AM market opening surge when ticker tick volume spikes 8x standard rates.
+          </p>
+<div class="p-2 rounded bg-slate-50 dark:bg-darkbg-subtle/50 text-[11px] space-y-1">
+<div class="text-slate-500 dark:text-slate-400"><strong class="text-slate-800 dark:text-slate-200">Concrete Next Step:</strong> Decouple WebSocket tick buffer from DOM paint; implement double buffering.</div>
+<div class="text-emerald-700 dark:text-emerald-400 font-medium"><strong>Target Metric:</strong> Maintain steady 60 FPS during open bell; lift F&amp;O App Store CSAT from 3.8 to 4.5.</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px]">
+<span class="text-slate-600 dark:text-slate-300 font-medium flex items-center gap-1">
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              DRI: Devendra P. (Trading Lead)
+            </span>
+<button class="text-[10px] font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-darkbg-subtle px-2 py-1 rounded border border-slate-200 dark:border-darkbg-border active:bg-slate-200">
+              Assign DRI
+            </button>
+</div>
+</div>
+</div>
+<!-- Action Blueprint 3 (P1 Reliability) -->
+<div class="bg-white dark:bg-darkbg-card rounded-xl border border-emerald-200 dark:border-emerald-900/50 shadow-sm overflow-hidden">
+<div class="bg-emerald-500/10 dark:bg-emerald-950/30 px-3.5 py-1.5 border-b border-emerald-100 dark:border-emerald-900/40 flex items-center justify-between">
+<span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 tracking-wider uppercase">P1 Reliability • Payments Squad</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400">High Impact / Low Effort</span>
+</div>
+<div class="p-3.5 space-y-2.5">
+<h3 class="text-xs font-bold text-slate-900 dark:text-white leading-tight">
+            Smart Retry Engine for NPCI Bank Mandates
+          </h3>
+<p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+            Eliminates weekend auto-debit drops across SBI and PSU partner banks that cause erroneous account lockouts.
+          </p>
+<div class="p-2 rounded bg-slate-50 dark:bg-darkbg-subtle/50 text-[11px] space-y-1">
+<div class="text-slate-500 dark:text-slate-400"><strong class="text-slate-800 dark:text-slate-200">Concrete Next Step:</strong> Introduce off-peak retry scheduling (04:00 AM) with proactive WhatsApp alerts.</div>
+<div class="text-emerald-700 dark:text-emerald-400 font-medium"><strong>Target Metric:</strong> Decrease mandate bounce-back from 14% to &lt;2.5%; protect ₹18Cr weekly volume.</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px]">
+<span class="text-slate-600 dark:text-slate-300 font-medium flex items-center gap-1">
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              DRI: Sneha M. (Payments PM)
+            </span>
+<button class="text-[10px] font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-darkbg-subtle px-2 py-1 rounded border border-slate-200 dark:border-darkbg-border active:bg-slate-200">
+              Assign DRI
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section03ActionLevers -->
+<!-- BEGIN: FooterNote -->
+<footer class="pt-4 pb-6 text-center space-y-1 text-slate-400 dark:text-slate-500 text-[11px]">
+<div class="flex items-center justify-center gap-1 text-emerald-600 dark:text-emerald-400 font-medium">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Synthesized via Groww LLM • Confidence: 99.4%</span>
+</div>
+<p>Next Executive Refresh: Monday, 08:00 AM IST</p>
+</footer>
+<!-- END: FooterNote -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MobileDockedNavigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0B0F19]/95 backdrop-blur-md border-t border-slate-200/80 dark:border-darkbg-border py-1.5 px-3" data-purpose="mobile-tab-bar">
+<div class="max-w-md mx-auto flex items-center justify-around">
+<!-- Tab 1: Dashboard -->
+<a class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 text-[10px] font-semibold py-1 px-2" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Dashboard</span>
+</a>
+<!-- Tab 2: Trends -->
+<a class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 text-[10px] font-semibold py-1 px-2" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Trends</span>
+</a>
+<!-- Tab 3: Pulse (Active) -->
+<a class="flex flex-col items-center gap-0.5 text-[#00D09C] text-[10px] font-bold py-1 px-2 relative" href="#">
+<div class="relative">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span class="absolute -top-1 -right-1.5 w-2 h-2 rounded-full bg-brand animate-ping"></span>
+<span class="absolute -top-1 -right-1.5 w-2 h-2 rounded-full bg-brand"></span>
+</div>
+<span>Pulse</span>
+</a>
+<!-- Tab 4: Areas -->
+<a class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 text-[10px] font-semibold py-1 px-2" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Areas</span>
+</a>
+<!-- Tab 5: Admin -->
+<a class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 text-[10px] font-semibold py-1 px-2" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Admin</span>
+</a>
+</div>
+</nav>
+<!-- END: MobileDockedNavigation -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="theme-toggle">
+    // Interactive Dark Mode Toggle logic
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const rootEl = document.documentElement;
+
+    themeBtn.addEventListener('click', () => {
+      if (rootEl.classList.contains('dark')) {
+        rootEl.classList.remove('dark');
+        rootEl.classList.add('light');
+        localStorage.setItem('groww_theme', 'light');
+      } else {
+        rootEl.classList.remove('light');
+        rootEl.classList.add('dark');
+        localStorage.setItem('groww_theme', 'dark');
+      }
+    });
+
+    // Check system preference or saved setting
+    if (localStorage.getItem('groww_theme') === 'dark' || 
+       (!('groww_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      rootEl.classList.add('dark');
+      rootEl.classList.remove('light');
+    } else {
+      rootEl.classList.remove('dark');
+      rootEl.classList.add('light');
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

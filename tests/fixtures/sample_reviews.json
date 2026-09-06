@@ -1,0 +1,90 @@
+[
+  {
+    "original_review": {
+      "review_id": "r1",
+      "app_id": "com.nextbillion.groww",
+      "source": "google_play",
+      "reviewer_name": "User 1",
+      "review_text": "App crashes every time I try to open my portfolio.",
+      "star_rating": 1,
+      "review_date": "2026-09-01T10:00:00",
+      "developer_reply": null,
+      "detected_language": "en",
+      "app_version": "1.0.0",
+      "source_url": null,
+      "collected_at": "2026-09-01T10:05:00"
+    },
+    "original_text": "App crashes every time I try to open my portfolio.",
+    "cleaned_text": "app crashes every time I try to open my portfolio.",
+    "detected_language": "en",
+    "is_usable": true,
+    "content_hash": "hash1",
+    "normalization_notes": []
+  },
+  {
+    "original_review": {
+      "review_id": "r2",
+      "app_id": "com.nextbillion.groww",
+      "source": "google_play",
+      "reviewer_name": "User 2",
+      "review_text": "Best trading app! Very easy to use.",
+      "star_rating": 5,
+      "review_date": "2026-09-01T11:00:00",
+      "developer_reply": null,
+      "detected_language": "en",
+      "app_version": "1.0.0",
+      "source_url": null,
+      "collected_at": "2026-09-01T11:05:00"
+    },
+    "original_text": "Best trading app! Very easy to use.",
+    "cleaned_text": "best trading app! very easy to use.",
+    "detected_language": "en",
+    "is_usable": true,
+    "content_hash": "hash2",
+    "normalization_notes": []
+  },
+  {
+    "original_review": {
+      "review_id": "r3",
+      "app_id": "com.nextbillion.groww",
+      "source": "google_play",
+      "reviewer_name": "User 3",
+      "review_text": "I can't add money from my bank account, it keeps saying failed.",
+      "star_rating": 2,
+      "review_date": "2026-09-01T12:00:00",
+      "developer_reply": null,
+      "detected_language": "en",
+      "app_version": "1.0.0",
+      "source_url": null,
+      "collected_at": "2026-09-01T12:05:00"
+    },
+    "original_text": "I can't add money from my bank account, it keeps saying failed.",
+    "cleaned_text": "I can't add money from my bank account, it keeps saying failed.",
+    "detected_language": "en",
+    "is_usable": true,
+    "content_hash": "hash3",
+    "normalization_notes": []
+  },
+  {
+    "original_review": {
+      "review_id": "r_unusable",
+      "app_id": "com.nextbillion.groww",
+      "source": "google_play",
+      "reviewer_name": "User 4",
+      "review_text": "👍👍👍",
+      "star_rating": 5,
+      "review_date": "2026-09-01T12:00:00",
+      "developer_reply": null,
+      "detected_language": "en",
+      "app_version": "1.0.0",
+      "source_url": null,
+      "collected_at": "2026-09-01T12:05:00"
+    },
+    "original_text": "👍👍👍",
+    "cleaned_text": "",
+    "detected_language": "en",
+    "is_usable": false,
+    "content_hash": "hash_unusable",
+    "normalization_notes": ["too short"]
+  }
+]

@@ -1,0 +1,38 @@
+name: Weekly Groww Feedback Agent
+
+on:
+  schedule:
+    # Run at 00:00 every Monday
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      - name: Run Agent
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROWW_AGENT_MCP_SERVER_URL: ${{ secrets.GROWW_AGENT_MCP_SERVER_URL }}
+          GROWW_AGENT_MCP_API_KEY: ${{ secrets.GROWW_AGENT_MCP_API_KEY }}
+        run: python main.py
+        
+      - name: Commit and push changes (Data Persistence)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/
+          git commit -m "chore: Update weekly feedback data" || echo "No changes to commit"
+          git push
