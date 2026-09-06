@@ -10,6 +10,7 @@ class AppConfig(BaseModel):
 class CollectionConfig(BaseModel):
     max_reviews: int = 500
     min_review_threshold: int = 10
+    min_word_count: int = 10
     reporting_period_days: int = 7
     historical_comparison_periods: int = 1
     pagination_limit: int = 100

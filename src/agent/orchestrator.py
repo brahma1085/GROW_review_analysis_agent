@@ -297,7 +297,7 @@ def create_agent(config: AgentConfig) -> Orchestrator:
     llm_client = LLMClient(api_key=os.environ.get("GROQ_API_KEY", "default-key"), model_name=config.analysis.llm_model)
     
     collector = GooglePlayAdapter()
-    normalizer = ReviewNormalizer()
+    normalizer = ReviewNormalizer(min_word_count=config.collection.min_word_count)
     deduplicator = ReviewDeduplicator()
     
     analyzer = ReviewAnalyzer(config=config)

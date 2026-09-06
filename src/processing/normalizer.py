@@ -15,8 +15,9 @@ logger = get_logger(__name__)
 DOMAIN_TERMS = {"KYC", "IPO", "MF", "SIP", "OTP", "UPI", "SGB", "FD", "NPS"}
 
 class ReviewNormalizer:
-    def __init__(self, min_length: int = 5):
+    def __init__(self, min_length: int = 5, min_word_count: int = 10):
         self.min_length = min_length
+        self.min_word_count = min_word_count
         # Regex to collapse multiple spaces and newlines
         self.whitespace_re = re.compile(r'\s+')
         
@@ -78,6 +79,10 @@ class ReviewNormalizer:
             is_usable = False
             discard_reason = "too_short"
             notes.append(f"Review too short (length: {len(pure_text)})")
+        elif len(pure_text.split()) < self.min_word_count:
+            is_usable = False
+            discard_reason = "too_few_words"
+            notes.append(f"Review has too few words (words: {len(pure_text.split())})")
             
         # 5. Domain term preservation (implicit if we don't aggressively lowercase/stem here)
         # We just keep the text as is (with normalized spaces)
