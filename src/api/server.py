@@ -153,28 +153,52 @@ async def test_mcp():
         
         mcp_client = MCPClient()
         
-        test_pulse = {
-            "app_id": "com.nextbillion.groww",
-            "period_start": datetime.now().isoformat(),
-            "period_end": datetime.now().isoformat(),
-            "metrics": {},
-            "themes": [{"theme": {"name": "Test Theme", "description": "This is a test from the MCP test endpoint."}}]
-        }
+        # Get real data
+        agg = get_latest_aggregate()
+        
+        if agg:
+            app_id = agg.get("app_id", "com.nextbillion.groww")
+            start_date = agg.get("period_start", "")[:10]
+            end_date = agg.get("period_end", "")[:10]
+            metrics = agg.get("metrics", {})
+            total_reviews = metrics.get("reviews_analyzed", 0)
+            avg_star = metrics.get("avg_star_rating", 0.0)
+            
+            themes_md = ""
+            for idx, t in enumerate(agg.get("themes", [])[:5]): # Top 5
+                theme = t.get("theme", {})
+                themes_md += f"{idx+1}. **{theme.get('name', '')}** (Priority: {t.get('priority', 'low').upper()})\n"
+                themes_md += f"   {theme.get('description', '')}\n"
+                themes_md += f"   *Impact: {theme.get('review_count', 0)} reviews*\n\n"
+                
+            pulse_markdown = (
+                f"# Weekly Feedback Pulse: {app_id}\n\n"
+                f"**Reporting Period:** {start_date} to {end_date}\n"
+                f"**Total Reviews Analyzed:** {total_reviews}\n"
+                f"**Average Rating (Sample):** {avg_star:.1f} stars\n\n"
+                f"## Top Detected Themes\n\n"
+                f"{themes_md if themes_md else 'No significant themes detected.'}"
+            )
+            title = f"Test Pulse (Real Data) - {app_id}"
+        else:
+            # Fallback
+            pulse_markdown = "# Test Pulse\nThis is a test from the MCP test endpoint using fallback data."
+            title = "Test Pulse - Fallback"
         
         # Test Docs
         if config.delivery.google_docs.document_id:
             await mcp_client.deliver_via_docs(
                 document_id=config.delivery.google_docs.document_id,
-                title="Test Pulse - Google Docs",
-                pulse_markdown="# Test Pulse\nThis is a test from the MCP test endpoint."
+                title=title,
+                pulse_markdown=pulse_markdown
             )
         
         # Test Email
         if config.delivery.gmail.recipients:
             await mcp_client.deliver_via_email(
                 recipients=config.delivery.gmail.recipients,
-                subject="Test Pulse - Gmail",
-                pulse_markdown="# Test Pulse\nThis is a test from the MCP test endpoint.",
+                subject=title,
+                pulse_markdown=pulse_markdown,
                 is_html=False
             )
         
