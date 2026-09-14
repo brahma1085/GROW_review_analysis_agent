@@ -162,9 +162,21 @@ async def test_mcp():
         }
         
         # Test Docs
-        await mcp_client.deliver_via_docs(test_pulse)
+        if config.delivery.google_docs.document_id:
+            await mcp_client.deliver_via_docs(
+                document_id=config.delivery.google_docs.document_id,
+                title="Test Pulse - Google Docs",
+                pulse_markdown="# Test Pulse\nThis is a test from the MCP test endpoint."
+            )
+        
         # Test Email
-        await mcp_client.deliver_via_email(test_pulse)
+        if config.delivery.gmail.recipients:
+            await mcp_client.deliver_via_email(
+                recipients=config.delivery.gmail.recipients,
+                subject="Test Pulse - Gmail",
+                pulse_markdown="# Test Pulse\nThis is a test from the MCP test endpoint.",
+                is_html=False
+            )
         
         return {"status": "success", "message": "Successfully sent test pulse to Google Docs and Gmail via MCP!"}
     except Exception as e:
