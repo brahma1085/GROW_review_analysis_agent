@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 export const Admin: React.FC = () => {
   const [statusData, setStatusData] = useState<{status: string, last_run: string, worker_id: string} | null>(null);
   const [isTriggering, setIsTriggering] = useState(false);
+  const [isTestingMcp, setIsTestingMcp] = useState(false);
+  const [mcpTestResult, setMcpTestResult] = useState<{status: string, message: string} | null>(null);
 
   const fetchStatus = async () => {
     try {
@@ -29,6 +31,21 @@ export const Admin: React.FC = () => {
       console.error("Failed to trigger run", e);
     } finally {
       setIsTriggering(false);
+    }
+  };
+
+  const handleTestMcp = async () => {
+    setIsTestingMcp(true);
+    setMcpTestResult(null);
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/api/admin/test-mcp`, { method: 'POST' });
+      const data = await res.json();
+      setMcpTestResult(data);
+    } catch (e) {
+      console.error("Failed to test MCP", e);
+      setMcpTestResult({ status: 'error', message: 'Network error or server unreachable' });
+    } finally {
+      setIsTestingMcp(false);
     }
   };
 
@@ -89,6 +106,43 @@ export const Admin: React.FC = () => {
                 <span className="text-xs font-mono font-medium text-primary-dark dark:text-primary">{statusData?.status || 'Unknown'}</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-24">
+          <div className="bg-white dark:bg-card-dark rounded-2xl p-5 border border-slate-200/80 dark:border-border-dark shadow-sm flex flex-col gap-4">
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="font-heading text-[11px] uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">Integration Diagnostics</span>
+                <span className="bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded-full text-[11px] font-semibold flex items-center gap-1">
+                  <span className="material-symbols-outlined text-[12px]">extension</span> MCP
+                </span>
+              </div>
+              <h2 className="font-heading text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Verify MCP Server</h2>
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                Sends a tiny test pulse immediately via your configured MCP server (Google Docs & Gmail).
+              </p>
+            </div>
+            
+            <button 
+              onClick={handleTestMcp}
+              disabled={isTestingMcp}
+              className={`w-full h-12 ${isTestingMcp ? 'bg-slate-300 dark:bg-slate-700 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 active:scale-[0.99]'} text-white font-heading font-semibold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group`}
+            >
+              <span className={`material-symbols-outlined text-[20px] ${!isTestingMcp ? 'transition-transform group-hover:scale-110' : ''}`}>send</span>
+              <span>{isTestingMcp ? 'Testing MCP...' : 'Send Test Pulse via MCP'}</span>
+            </button>
+
+            {mcpTestResult && (
+              <div className={`mt-2 p-3 rounded-lg text-sm ${mcpTestResult.status === 'success' ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800' : 'bg-red-50 text-red-700 dark:bg-red-500/10 dark:text-red-400 border border-red-200 dark:border-red-800'}`}>
+                <div className="flex items-start gap-2">
+                  <span className="material-symbols-outlined text-[18px]">
+                    {mcpTestResult.status === 'success' ? 'check_circle' : 'error'}
+                  </span>
+                  <p>{mcpTestResult.message}</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
