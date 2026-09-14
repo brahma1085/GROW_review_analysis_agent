@@ -14,7 +14,7 @@ collection:
 
 analysis:
   llm_model: "openai/gpt-oss-120b"
-  reporting_llm_model: "gemini-flash-latest"
+  reporting_llm_model: "gemini-3.5-flash"
   llm_temperature: 0.2
   batch_size: 30
   max_retries: 3

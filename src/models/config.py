@@ -17,7 +17,7 @@ class CollectionConfig(BaseModel):
 
 class AnalysisConfig(BaseModel):
     llm_model: str = "openai/gpt-oss-120b"
-    reporting_llm_model: str = "gemini-flash-latest"
+    reporting_llm_model: str = "gemini-3.5-flash"
     llm_temperature: float = 0.2
     batch_size: int = 30
     max_retries: int = 3
