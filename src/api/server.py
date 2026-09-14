@@ -19,7 +19,7 @@ logger = structlog.get_logger(__name__)
 app = FastAPI(title="Groww Feedback Intelligence API")
 
 # Allow requests from Vite frontend
-frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173,http://localhost:3000")
+frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173,http://localhost:3000,https://growagent-six.vercel.app")
 allowed_origins = [origin.strip() for origin in frontend_url.split(",")]
 
 app.add_middleware(
