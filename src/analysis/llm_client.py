@@ -1,5 +1,6 @@
 import json
 from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
+import httpx
 from groq import Groq, APIError, APIConnectionError, RateLimitError
 import structlog
 
@@ -9,7 +10,9 @@ class LLMClient:
     """Wrapper around the Groq SDK with retry logic and structured JSON support."""
     
     def __init__(self, api_key: str, model_name: str, temperature: float = 0.1, max_tokens: int = 4096):
-        self.client = Groq(api_key=api_key)
+        # Using HTTP/2 to prevent Cloudflare/Groq from dropping connections from datacenter IPs
+        http_client = httpx.Client(http2=True)
+        self.client = Groq(api_key=api_key, http_client=http_client)
         self.model_name = model_name
         self.temperature = temperature
         self.max_tokens = max_tokens
