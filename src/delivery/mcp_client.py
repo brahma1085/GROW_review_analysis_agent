@@ -57,12 +57,18 @@ class MCPClient:
         }
         return await self.call_tool("google_docs_append_content", arguments)
 
-    async def deliver_via_email(self, recipients: list[str], subject: str, pulse_markdown: str, is_html: bool = False):
+    async def deliver_via_email(self, recipients: list[str], subject: str, pulse_markdown: str, is_html: bool = False, doc_url: str = None):
         """Deliver the pulse report by sending an email."""
+        
+        # Optionally append the doc URL to the email body if it exists
+        body = pulse_markdown
+        if doc_url:
+            body += f"\n\nLink to Google Doc: {doc_url}"
+            
         arguments = {
             "to": recipients,
             "subject": subject,
-            "body": pulse_markdown,
+            "body": body,
             "isHtml": is_html
         }
         return await self.call_tool("gmail_send_email", arguments)
