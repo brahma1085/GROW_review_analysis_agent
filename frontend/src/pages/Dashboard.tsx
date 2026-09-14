@@ -12,7 +12,7 @@ export const Dashboard: React.FC = () => {
   const [summary, setSummary] = useState<DashboardSummary | null>(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/dashboard/summary')
+    fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/api/dashboard/summary`)
       .then(res => res.json())
       .then(data => setSummary(data))
       .catch(console.error);

@@ -13,7 +13,7 @@ export const Pulse: React.FC = () => {
   const [themes, setThemes] = useState<Theme[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/dashboard/themes')
+    fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/api/dashboard/themes`)
       .then(res => res.json())
       .then(data => setThemes(data))
       .catch(console.error);

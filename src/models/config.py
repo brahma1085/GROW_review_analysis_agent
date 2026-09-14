@@ -16,7 +16,8 @@ class CollectionConfig(BaseModel):
     pagination_limit: int = 100
 
 class AnalysisConfig(BaseModel):
-    llm_model: str = "opengpt-oss-120b"
+    llm_model: str = "openai/gpt-oss-120b"
+    reporting_llm_model: str = "gemini-3.6-flash"
     llm_temperature: float = 0.2
     batch_size: int = 30
     max_retries: int = 3

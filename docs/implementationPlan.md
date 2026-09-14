@@ -49,7 +49,7 @@
 | Data models | **Pydantic v2** | Type-safe, validated, JSON-serializable models |
 | Config management | **python-dotenv** + **PyYAML** + **Pydantic Settings** | Layered config with env variable overrides |
 | Review scraping | **google-play-scraper** | Most mature Python library for public Play Store reviews |
-| LLM integration | **groq** (Groq SDK) | Matches the architecture's default model choice |
+| LLM integration | **groq** (Groq SDK) & **google-genai** (Gemini SDK) | Dual LLM strategy to optimize free-tier API limits across providers |
 | Testing | **pytest** + **pytest-asyncio** | Industry standard; async support if needed |
 | Logging | **Python `logging`** + **structlog** | Structured JSON logging with minimal dependencies |
 | CLI | **argparse** or **click** | Simple CLI; no heavy framework needed |
@@ -259,7 +259,7 @@ Matching [problemStatement.md § 6](file:///d:/GenAI/Practice/Pranju/GROW_review
 #### 1.5 Implement Configuration Models (`src/models/config.py`)
 - `AppConfig` — name, package_id, store, play_store_url.
 - `CollectionConfig` — max_reviews, min_review_threshold, min_word_count, reporting_period_days, historical_comparison_periods, pagination_limit.
-- `AnalysisConfig` — llm_model, llm_temperature, batch_size, max_retries, retry_backoff_seconds, custom_categories.
+- `AnalysisConfig` — llm_model, reporting_llm_model, llm_temperature, batch_size, max_retries, retry_backoff_seconds, custom_categories.
 - `PriorityConfig` — weights (dict), thresholds (dict).
 - `DeduplicationConfig` — exact_match, near_duplicate_threshold.
 - `DeliveryConfig` — google_docs (GoogleDocsConfig), gmail (GmailConfig).
@@ -283,7 +283,7 @@ Full configuration file with sensible defaults as defined in [architecture.md §
    Safely committed to version control. Defines the default behavior of the agent across all environments. Sensitive keys (like `api_key`) should be left blank.
    - **App Settings**: `app.name`, `app.package_id`, `app.play_store_url`
    - **Collection**: `collection.max_reviews`, `collection.min_review_threshold`, `collection.min_word_count`, `collection.reporting_period_days`, `collection.historical_comparison_periods`
-   - **Analysis**: `analysis.llm_model`, `analysis.llm_temperature`, `analysis.batch_size`, `analysis.sentiment_labels`, `analysis.custom_categories`
+   - **Analysis**: `analysis.llm_model`, `analysis.reporting_llm_model`, `analysis.llm_temperature`, `analysis.batch_size`, `analysis.sentiment_labels`, `analysis.custom_categories`
    - **Priority & Deduplication**: Weights, thresholds, and exact/near matching configs.
    - **Storage & Logging**: `storage.data_dir`, `logging.level`, `logging.format`
    - **Delivery Options**: `delivery.mcp.server_url`, `delivery.mcp.api_key` (empty), Gmail/Docs placeholders.

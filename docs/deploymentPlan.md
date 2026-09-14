@@ -43,7 +43,8 @@ The backend encompasses the Core Agent (Collection, Processing, Analysis, Genera
 ### 3.1 Pre-requisites
 - A Railway account connected to the project's GitHub repository.
 - Required Environment Variables defined:
-  - `GROQ_API_KEY`: For LLM analysis.
+  - `GROQ_API_KEY`: For LLM analysis/classification (Groq).
+  - `GEMINI_API_KEY`: For LLM reporting and prose generation (Google GenAI).
   - `GROWW_AGENT_MCP_SERVER_URL`: Local or railway-internal URL.
   - `GROWW_AGENT_MCP_API_KEY`: Authentication for MCP.
   - Google Workspace credentials for the MCP Server.

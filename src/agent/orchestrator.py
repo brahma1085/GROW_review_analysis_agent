@@ -162,7 +162,8 @@ class Orchestrator:
                 prioritized_themes=prioritized_themes,
                 evidence_result=evidence_result,
                 config=self.config,
-                llm_client=self.theme_discovery.llm_client if hasattr(self.theme_discovery, 'llm_client') else None
+                llm_client=self.theme_discovery.llm_client if hasattr(self.theme_discovery, 'llm_client') else None,
+                reporting_llm_client=self.pulse_generator.reporting_llm_client if hasattr(self.pulse_generator, 'reporting_llm_client') else None
             )
             
             pulse = self.pulse_generator.generate_pulse(context)
@@ -290,11 +291,13 @@ def create_agent(config: AgentConfig) -> Orchestrator:
     from src.delivery.google_docs_adapter import GoogleDocsAdapter
     from src.storage.json_file_store import JsonFileStore
     from src.analysis.llm_client import LLMClient
+    from src.analysis.gemini_client import GeminiClient
     
     from src.delivery.mcp_client import MCPClient
     
     # Initialize basic components
     llm_client = LLMClient(api_key=os.environ.get("GROQ_API_KEY", "default-key"), model_name=config.analysis.llm_model)
+    reporting_llm_client = GeminiClient(api_key=os.environ.get("GEMINI_API_KEY", "default-key"), model_name=config.analysis.reporting_llm_model)
     
     collector = GooglePlayAdapter()
     normalizer = ReviewNormalizer(min_word_count=config.collection.min_word_count)
@@ -308,6 +311,7 @@ def create_agent(config: AgentConfig) -> Orchestrator:
     
     # Needs actual template dir
     pulse_generator = PulseGenerator()
+    pulse_generator.reporting_llm_client = reporting_llm_client
     
     class DummyValidator:
         def validate(self, *args, **kwargs):

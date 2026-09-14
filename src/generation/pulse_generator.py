@@ -13,6 +13,7 @@ from src.models.review import AnalyzedReview, ReviewCategory
 from src.models.theme import ThemeResult, TrendResult, PrioritizedTheme, PriorityLevel, Sentiment, SeverityLevel
 from src.models.config import AgentConfig
 from src.analysis.llm_client import LLMClient
+from src.analysis.gemini_client import GeminiClient
 from src.analysis.evidence_selection import EvidenceResult
 from src.prompts.pulse_generation_prompt import PULSE_GENERATION_SYSTEM_PROMPT, PULSE_GENERATION_USER_PROMPT
 
@@ -30,11 +31,12 @@ class AnalysisContext:
     prioritized_themes: List[PrioritizedTheme]
     evidence_result: EvidenceResult
     config: AgentConfig
-    llm_client: LLMClient
+    llm_client: Optional[LLMClient] = None
+    reporting_llm_client: Optional[GeminiClient] = None
 
 class PulseGenerator:
     def __init__(self):
-        pass
+        self.reporting_llm_client = None
 
     def generate_pulse(self, context: AnalysisContext) -> WeeklyPulse:
         logger.info("Generating Weekly Pulse report...")
@@ -244,7 +246,10 @@ class PulseGenerator:
         
         try:
             logger.info("Calling LLM for Executive Summary and Recommended Actions...")
-            response = context.llm_client.analyze_batch_json(
+            if not context.reporting_llm_client:
+                raise ValueError("reporting_llm_client is not configured in AnalysisContext.")
+                
+            response = context.reporting_llm_client.analyze_batch_json(
                 prompt=prompt,
                 system_prompt=PULSE_GENERATION_SYSTEM_PROMPT
             )

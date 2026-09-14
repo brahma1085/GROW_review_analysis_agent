@@ -951,7 +951,7 @@ All prompts must instruct the LLM to:
 
 ### 8.3 Stage 1 — Review-Level Classification Prompt
 
-**Input:** Batch of normalized reviews. To optimize token usage and avoid Groq free-tier TPM (Tokens Per Minute) limits, the payload is stripped of irrelevant metadata. Only `review_id`, `cleaned_text`, and `star_rating` are sent to the LLM.  
+**Input:** Batch of normalized reviews. To optimize token usage and avoid Groq free-tier TPM (Tokens Per Minute) limits during classification, the payload is stripped of irrelevant metadata. Only `review_id`, `cleaned_text`, and `star_rating` are sent to the LLM.  
 **Output:** Structured JSON per review.
 
 ```json
@@ -1108,7 +1108,7 @@ app:
   play_store_url: "https://play.google.com/store/apps/details?id=com.nextbillion.groww&hl=en_IN"
 
 collection:
-  max_reviews: 50
+  max_reviews: 100
   min_review_threshold: 10
   min_word_count: 10
   reporting_period_days: 7
@@ -1116,7 +1116,8 @@ collection:
   pagination_limit: 50
 
 analysis:
-  llm_model: "opengpt-oss-120b"
+  llm_model: "openai/gpt-oss-120b"
+  reporting_llm_model: "gemini-3.6-flash"
   llm_temperature: 0.2
   batch_size: 30
   max_retries: 3
@@ -1618,7 +1619,7 @@ class MockGmailMCP:
 
 - **Python 3.10+**
 - **google-play-scraper** (or equivalent) for review collection
-- **LLM SDK** (Groq / OpenAI / etc.) for analysis
+- **LLM SDK** (Groq SDK for analysis / Google GenAI SDK for reporting)
 - **pydantic** for data models and validation
 - **python-dotenv** for environment configuration
 - **pyyaml** for config file parsing

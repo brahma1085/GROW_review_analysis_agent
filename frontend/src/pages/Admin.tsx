@@ -6,7 +6,7 @@ export const Admin: React.FC = () => {
 
   const fetchStatus = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/admin/status');
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/api/admin/status`);
       const data = await res.json();
       setStatusData(data);
     } catch (e) {
@@ -23,7 +23,7 @@ export const Admin: React.FC = () => {
   const handleTrigger = async () => {
     setIsTriggering(true);
     try {
-      await fetch('http://localhost:8000/api/admin/trigger-run', { method: 'POST' });
+      await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/api/admin/trigger-run`, { method: 'POST' });
       await fetchStatus();
     } catch (e) {
       console.error("Failed to trigger run", e);
