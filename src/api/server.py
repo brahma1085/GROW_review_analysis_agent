@@ -13,6 +13,9 @@ sys.path.append(str(project_root))
 
 from src.agent.orchestrator import create_agent
 from src.config.manager import ConfigManager
+from src.delivery.mcp_client import MCPClient
+import json
+import glob
 
 logger = structlog.get_logger(__name__)
 
@@ -59,39 +62,73 @@ async def run_pipeline_task():
         logger.exception("Pipeline failed", error=str(e))
         pipeline_status["status"] = f"Failed: {str(e)}"
 
+def get_latest_aggregate():
+    search_path = str(project_root / "data" / "aggregates" / "com.nextbillion.groww" / "*_aggregate.json")
+    files = glob.glob(search_path)
+    if not files:
+        return None
+    latest_file = max(files, key=os.path.getctime)
+    with open(latest_file, "r") as f:
+        return json.load(f)
+
 @app.get("/api/dashboard/summary")
 async def get_summary():
-    # In a real scenario, this would read from a database or JsonFileStore.
-    # We return mocked data to populate the frontend for now.
+    agg = get_latest_aggregate()
+    if not agg:
+        return {
+            "health_score": 0,
+            "health_score_delta": "No data",
+            "avg_star_rating": 0,
+            "positive_sentiment": "0%",
+            "total_reviews": "0",
+            "negative_reviews": 0,
+            "sentiment_breakdown": {"positive": 0, "neutral": 0, "negative": 0}
+        }
+    
+    metrics = agg.get("metrics", {})
+    avg_star = round(metrics.get("avg_star_rating", 0), 1)
+    
+    sentiment_dist = metrics.get("sentiment_distribution", {})
+    pct = sentiment_dist.get("percentages", {})
+    positive_pct = pct.get("positive", 0)
+    
+    health_score = round((positive_pct / 100.0) * 5 + (avg_star / 5) * 5, 1)
+    
     return {
-        "health_score": 8.4,
-        "health_score_delta": "+0.6 vs last week",
-        "avg_star_rating": 4.2,
-        "positive_sentiment": "68%",
-        "total_reviews": "14.8k"
+        "health_score": health_score,
+        "health_score_delta": "",
+        "avg_star_rating": avg_star,
+        "positive_sentiment": f"{round(positive_pct, 1)}%",
+        "total_reviews": str(metrics.get("reviews_analyzed", 0)),
+        "negative_reviews": sentiment_dist.get("negative_count", 0),
+        "sentiment_breakdown": {
+            "positive": round(pct.get("positive", 0), 1),
+            "neutral": round(pct.get("neutral", 0), 1),
+            "negative": round(pct.get("negative", 0), 1)
+        }
     }
 
 @app.get("/api/dashboard/themes")
 async def get_themes():
-    # Mocked theme list based on UI design
-    return [
-        {
-            "id": "1",
-            "name": "Login/OTP Issues",
-            "description": "Users are reporting delays in receiving OTPs during login.",
-            "count": 450,
-            "percentage": "12%",
-            "priority": "CRITICAL",
-        },
-        {
-            "id": "2",
-            "name": "App Crash on Startup",
-            "description": "App crashes immediately after opening for some users on older Android versions.",
-            "count": 120,
-            "percentage": "3%",
-            "priority": "HIGH",
-        }
-    ]
+    agg = get_latest_aggregate()
+    if not agg:
+        return []
+    
+    mapped_themes = []
+    for t in agg.get("themes", []):
+        theme_data = t.get("theme", {})
+        mapped_themes.append({
+            "id": theme_data.get("id", ""),
+            "name": theme_data.get("name", "Unknown Theme"),
+            "description": theme_data.get("description", ""),
+            "count": theme_data.get("review_count", 0),
+            "percentage": f"{round(theme_data.get('review_percentage', 0), 1)}%",
+            "priority": str(t.get("priority", "low")).upper()
+        })
+    
+    # Sort by count descending
+    mapped_themes.sort(key=lambda x: x["count"], reverse=True)
+    return mapped_themes
 
 @app.post("/api/admin/trigger-run")
 async def trigger_run(background_tasks: BackgroundTasks):
@@ -106,6 +143,33 @@ async def trigger_run(background_tasks: BackgroundTasks):
 async def get_status():
     global pipeline_status
     return pipeline_status
+
+@app.post("/api/admin/test-mcp")
+async def test_mcp():
+    try:
+        config_path = str(project_root / "config.yaml")
+        ConfigManager.load(config_path)
+        config = ConfigManager.get_config()
+        
+        mcp_client = MCPClient()
+        
+        test_pulse = {
+            "app_id": "com.nextbillion.groww",
+            "period_start": datetime.now().isoformat(),
+            "period_end": datetime.now().isoformat(),
+            "metrics": {},
+            "themes": [{"theme": {"name": "Test Theme", "description": "This is a test from the MCP test endpoint."}}]
+        }
+        
+        # Test Docs
+        await mcp_client.deliver_via_docs(test_pulse)
+        # Test Email
+        await mcp_client.deliver_via_email(test_pulse)
+        
+        return {"status": "success", "message": "Successfully sent test pulse to Google Docs and Gmail via MCP!"}
+    except Exception as e:
+        logger.error(f"MCP Test Failed: {str(e)}")
+        return {"status": "error", "message": f"MCP Test Failed: {str(e)}"}
 
 if __name__ == "__main__":
     import uvicorn

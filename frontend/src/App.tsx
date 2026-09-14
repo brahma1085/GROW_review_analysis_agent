@@ -12,7 +12,9 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="admin" element={<Admin />} />
           <Route path="trends" element={<Pulse />} />
-          {/* Add more routes here */}
+          <Route path="product-areas" element={<div className="p-8 text-center text-slate-500">Product Areas module coming soon.</div>} />
+          <Route path="voc" element={<div className="p-8 text-center text-slate-500">VoC Explorer module coming soon.</div>} />
+          <Route path="logs" element={<div className="p-8 text-center text-slate-500">Logs & History module coming soon.</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
