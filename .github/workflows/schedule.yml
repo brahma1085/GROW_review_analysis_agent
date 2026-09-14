@@ -25,6 +25,7 @@ jobs:
       - name: Run Agent
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROWW_AGENT_MCP_SERVER_URL: ${{ secrets.GROWW_AGENT_MCP_SERVER_URL }}
           GROWW_AGENT_MCP_API_KEY: ${{ secrets.GROWW_AGENT_MCP_API_KEY }}
         run: python main.py
