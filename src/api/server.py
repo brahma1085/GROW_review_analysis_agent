@@ -186,20 +186,36 @@ async def test_mcp():
             title = "Test Pulse - Fallback"
         
         # Test Docs
+        doc_url = None
         if config.delivery.google_docs.document_id:
             await mcp_client.deliver_via_docs(
                 document_id=config.delivery.google_docs.document_id,
                 title=title,
                 pulse_markdown=pulse_markdown
             )
-        
+            doc_url = f"https://docs.google.com/document/d/{config.delivery.google_docs.document_id}/edit"
+        else:
+            logger.info("No Docs URL provided. Creating a new document via MCP...")
+            content_blocks = [
+                {"type": "heading", "text": title, "level": 1},
+                {"type": "paragraph", "text": pulse_markdown}
+            ]
+            new_doc_id = await mcp_client.create_document(
+                title=title,
+                content=content_blocks
+            )
+            if new_doc_id:
+                doc_url = f"https://docs.google.com/document/d/{new_doc_id}/edit"
+                logger.info(f"Created new document: {doc_url}")
+
         # Test Email
         if config.delivery.gmail.recipients:
             await mcp_client.deliver_via_email(
                 recipients=config.delivery.gmail.recipients,
                 subject=title,
                 pulse_markdown=pulse_markdown,
-                is_html=False
+                is_html=False,
+                doc_url=doc_url
             )
         
         return {"status": "success", "message": "Successfully sent test pulse to Google Docs and Gmail via MCP!"}

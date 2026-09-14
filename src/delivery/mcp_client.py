@@ -57,6 +57,26 @@ class MCPClient:
         }
         return await self.call_tool("google_docs_append_content", arguments)
 
+    async def create_document(self, title: str, content: list) -> str:
+        """Create a new Google Doc and optionally insert content."""
+        arguments = {
+            "title": title,
+            "content": content
+        }
+        result = await self.call_tool("google_docs_create_document", arguments)
+        
+        # Handle different return types from MCP SDK
+        if hasattr(result, 'content') and len(result.content) > 0:
+            import json
+            try:
+                data = json.loads(result.content[0].text)
+                return data.get("documentId")
+            except:
+                pass
+        if isinstance(result, dict):
+            return result.get("documentId")
+        return str(result)
+
     async def deliver_via_email(self, recipients: list[str], subject: str, pulse_markdown: str, is_html: bool = False, doc_url: str = None):
         """Deliver the pulse report by sending an email."""
         

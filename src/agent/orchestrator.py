@@ -212,13 +212,31 @@ class Orchestrator:
                                 title=title,
                                 pulse_markdown=pulse_md
                             )
-                            # Mocking doc_url since MCP might not return it directly here
-                            doc_url = "mcp_docs_url_placeholder"
+                            doc_url = f"https://docs.google.com/document/d/{docs_config.document_id}/edit"
                             report.delivery.docs_success = True
                             report.delivery.docs_url = doc_url
                         except Exception as e:
                             logger.error(f"MCP Docs delivery failed: {e}")
                             report.errors.append(f"Docs delivery failed: {e}")
+                    else:
+                        try:
+                            logger.info("No Docs URL provided. Creating a new document via MCP...")
+                            content_blocks = [
+                                {"type": "heading", "text": title, "level": 1},
+                                {"type": "paragraph", "text": pulse_md}
+                            ]
+                            new_doc_id = await self.mcp_client.create_document(
+                                title=title,
+                                content=content_blocks
+                            )
+                            if new_doc_id:
+                                doc_url = f"https://docs.google.com/document/d/{new_doc_id}/edit"
+                                logger.info(f"Created new document: {doc_url}")
+                                report.delivery.docs_success = True
+                                report.delivery.docs_url = doc_url
+                        except Exception as e:
+                            logger.error(f"MCP Docs creation failed: {e}")
+                            report.errors.append(f"Docs creation failed: {e}")
                     
                     gmail_config = self.config.delivery.gmail
                     if gmail_config.recipients:
