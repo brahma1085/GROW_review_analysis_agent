@@ -5,8 +5,8 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # Install system dependencies if any are needed
 RUN apt-get update \
@@ -23,5 +23,4 @@ COPY . .
 # Expose the API port
 EXPOSE 8000
 
-# Command to run the API server
-CMD ["uvicorn", "src.api.server:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD bash start.sh
