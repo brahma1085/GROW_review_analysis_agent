@@ -113,14 +113,14 @@ export const Admin: React.FC = () => {
           <div className="bg-white dark:bg-card-dark rounded-2xl p-5 border border-slate-200/80 dark:border-border-dark shadow-sm flex flex-col gap-4">
             <div>
               <div className="flex items-center justify-between mb-1.5">
-                <span className="font-heading text-[11px] uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">Integration Diagnostics</span>
+                <span className="font-heading text-[11px] uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">Report Distribution</span>
                 <span className="bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded-full text-[11px] font-semibold flex items-center gap-1">
                   <span className="material-symbols-outlined text-[12px]">extension</span> MCP
                 </span>
               </div>
-              <h2 className="font-heading text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Verify MCP Server</h2>
+              <h2 className="font-heading text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Distribute Latest Report</h2>
               <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
-                Sends a tiny test pulse immediately via your configured MCP server (Google Docs & Gmail).
+                Manually trigger the distribution of the most recent Weekly Pulse report to your configured Google Docs and Gmail recipients.
               </p>
             </div>
             
@@ -130,7 +130,7 @@ export const Admin: React.FC = () => {
               className={`w-full h-12 ${isTestingMcp ? 'bg-slate-300 dark:bg-slate-700 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 active:scale-[0.99]'} text-white font-heading font-semibold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group`}
             >
               <span className={`material-symbols-outlined text-[20px] ${!isTestingMcp ? 'transition-transform group-hover:scale-110' : ''}`}>send</span>
-              <span>{isTestingMcp ? 'Testing MCP...' : 'Send Test Pulse via MCP'}</span>
+              <span>{isTestingMcp ? 'Distributing...' : 'Distribute Latest Report via MCP'}</span>
             </button>
 
             {mcpTestResult && (
