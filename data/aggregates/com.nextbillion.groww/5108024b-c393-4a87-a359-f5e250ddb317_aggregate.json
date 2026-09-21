@@ -1,0 +1,531 @@
+{
+  "run_id": "5108024b-c393-4a87-a359-f5e250ddb317",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-09-14T03:48:16.157011",
+  "period_end": "2026-09-21T03:48:16.157011",
+  "metrics": {
+    "reviews_analyzed": 15,
+    "avg_star_rating": 2.6,
+    "sentiment_distribution": {
+      "positive_count": 4,
+      "neutral_count": 4,
+      "negative_count": 7,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 26.67,
+        "neutral": 26.67,
+        "negative": 46.67,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 13,
+    "emerging_count": 0,
+    "critical_high_count": 4,
+    "rating_distribution": {
+      "1": 7,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 4
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "Account Setup Errors and Support Shortcomings",
+        "description": "Problems with incorrect auto\u2011filled personal data during account creation and unhelpful customer support.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "onboarding_kyc",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "08f74b19-e246-4ad6-ad04-6fb6844b18bc"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_7",
+        "name": "Security & Fraud Concerns",
+        "description": "User worries about potential fraud, unexpected stock pledging, and financial risk.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "35c395d6-7f44-4e00-81b3-f0bbf57f9787"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_9",
+        "name": "Withdrawal Problems & Trust Issues",
+        "description": "Complaints about being unable to withdraw money, perceived false promises, and overall distrust.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "account_issues",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "170b1207-195c-4ab8-b422-8e9133b66aba"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_11",
+        "name": "External Fund Import & Portfolio Accuracy Bugs",
+        "description": "Reports of broken external fund import, incorrect investment values, and automated support replies.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "mutual_funds",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "54937f05-0997-4ce6-9df6-a27bbfab9093"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "Chart Navigation Usability Issues",
+        "description": "Complaints about having to click each bar individually and difficulty getting an overview of charts.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "d09ac4e9-18bb-4922-a2c0-f607205dfb4c"
+        ]
+      },
+      "priority": "high",
+      "score": 0.53,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_13",
+        "name": "Overall Product Quality Disappointment",
+        "description": "General negative sentiment about the product's vision and perceived low quality.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "e552ef66-4b7a-4b9d-bc8e-4e324206b374"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.47,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "Positive UI/UX Experience",
+        "description": "Users express satisfaction with the app's user interface, ease of use, and visual design.",
+        "review_count": 2,
+        "review_percentage": 13.33,
+        "sentiment_distribution": {
+          "positive_count": 2,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "9989f992-030a-4e68-8522-5585f6930177",
+          "c2db32b1-6c93-4043-9f11-768c879b14c7"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.25,
+      "factor_breakdown": {
+        "frequency": 0.06665,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "General Praise & Encouragement",
+        "description": "Broad positive remarks that do not reference specific features, often encouraging the team.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "7a2509be-7abc-4f8f-937f-8a6449d73bf6"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "Need for Trading Education",
+        "description": "Requests for beginner\u2011level trading guidance and educational resources.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "2dbd2263-349f-4d36-ba05-24c5b7639572"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_6",
+        "name": "Watchlist Feature Enhancements",
+        "description": "Feature requests to add a \"last added\" indicator and sorting capabilities in the watchlist.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "75bc4336-54f3-4e19-99d9-df6bc9549cd5"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_8",
+        "name": "Advanced Charting Feature Requests",
+        "description": "Requests for updated volume candles and TradingView\u2011style charting capabilities.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "59bc79ce-4a07-4614-af1e-c58cbdf08e0f"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_10",
+        "name": "Open Interest Feature Praise",
+        "description": "Positive feedback specifically highlighting the open interest bar and related data.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "79a5db6d-edcf-4de7-9448-976ba2baa5bf"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_12",
+        "name": "Weekend Bank Transfer Support Request",
+        "description": "Feature request to enable bank transfers on Saturdays and Sundays.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "cd40ff58-c114-4208-9fa2-38b56dde2557"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
