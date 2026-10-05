@@ -1,0 +1,226 @@
+{
+  "run_id": "6f7dedee-864c-42ba-a474-9cd802c2bfa8",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-09-28T04:33:29.146275",
+  "period_end": "2026-10-05T04:33:29.146275",
+  "metrics": {
+    "reviews_analyzed": 5,
+    "avg_star_rating": 3.0,
+    "sentiment_distribution": {
+      "positive_count": 2,
+      "neutral_count": 1,
+      "negative_count": 2,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 40.0,
+        "neutral": 20.0,
+        "negative": 40.0,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 5,
+    "emerging_count": 0,
+    "critical_high_count": 1,
+    "rating_distribution": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 2
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "Missing transactions & fraud concerns",
+        "description": "Users report money not arriving, missing transaction history, and suspect fraudulent activity leading to financial loss.",
+        "review_count": 1,
+        "review_percentage": 20.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "critical",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "e8a121e4-8fc5-46b5-b5be-915b90905d84"
+        ]
+      },
+      "priority": "high",
+      "score": 0.72,
+      "factor_breakdown": {
+        "frequency": 0.1,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.25,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "Chart and refresh glitches causing trade entry loss",
+        "description": "Complaints about the chart view refreshing repeatedly, entries disappearing, and overall performance instability.",
+        "review_count": 1,
+        "review_percentage": 20.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "b42ce486-e725-4fb6-aa39-6cbf6b387813"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.1,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "Restoring removed technical analysis indicators",
+        "description": "Feature requests to bring back indicators such as Max Pain, Support and Resistance that were previously removed.",
+        "review_count": 1,
+        "review_percentage": 20.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "f28c06a5-3e33-4cd4-9ceb-e4e0383e45f2"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.29,
+      "factor_breakdown": {
+        "frequency": 0.1,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "UI customization for active traders",
+        "description": "Suggestions to add options for hiding or minimizing individual stock/F&O positions to improve convenience for active traders.",
+        "review_count": 1,
+        "review_percentage": 20.0,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "43ef6e9f-e01a-4099-8b8d-a194e4e1de1d"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.29,
+      "factor_breakdown": {
+        "frequency": 0.1,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "Trustworthiness and overall satisfaction",
+        "description": "Positive feedback highlighting the app's reliability, trustworthiness, and long\u2011term user satisfaction.",
+        "review_count": 1,
+        "review_percentage": 20.0,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "bf83b2c6-5770-4cc6-a9fa-b0d31c61d1ba"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.29,
+      "factor_breakdown": {
+        "frequency": 0.1,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
