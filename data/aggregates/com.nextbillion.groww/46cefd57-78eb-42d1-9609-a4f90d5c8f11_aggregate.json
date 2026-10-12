@@ -1,0 +1,454 @@
+{
+  "run_id": "46cefd57-78eb-42d1-9609-a4f90d5c8f11",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-10-05T04:47:38.613210",
+  "period_end": "2026-10-12T04:47:38.613210",
+  "metrics": {
+    "reviews_analyzed": 11,
+    "avg_star_rating": 3.73,
+    "sentiment_distribution": {
+      "positive_count": 6,
+      "neutral_count": 1,
+      "negative_count": 4,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 54.55,
+        "neutral": 9.09,
+        "negative": 36.36,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 11,
+    "emerging_count": 0,
+    "critical_high_count": 2,
+    "rating_distribution": {
+      "1": 3,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 7
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "Withdrawal & Account Freeze Issues",
+        "description": "Issues related to inability to withdraw funds and accounts being frozen, often after verification delays.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "kyc",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "fc467c0a-2912-448b-af61-ea670103cbc4"
+        ]
+      },
+      "priority": "high",
+      "score": 0.61,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "Unauthorized Auto\u2011Investments & Withdrawal Problems",
+        "description": "Complaints about automatic SIP actions performed without permission and related withdrawal difficulties.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "mutual_funds",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "0931366b-c95f-4dc4-a720-17280293f85d"
+        ]
+      },
+      "priority": "high",
+      "score": 0.61,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "Negative Customer Support Experience",
+        "description": "Users reporting poor or unresponsive customer support experiences.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "b8d0baea-7459-4b7c-befc-295f762fb8c9"
+        ]
+      },
+      "priority": "high",
+      "score": 0.55,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "High Trading Fees & Profitability Concerns",
+        "description": "Concerns about high per\u2011trade charges and overall lack of profitability.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "a057fab4-e4e3-4e6a-aaae-97a9b35f44b2"
+        ]
+      },
+      "priority": "high",
+      "score": 0.55,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "Positive Customer Support Experience",
+        "description": "Users expressing satisfaction with quick and helpful customer support.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "9efd558d-0a09-47df-8150-5ae4ee76d615"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_6",
+        "name": "Request for Lower Fees",
+        "description": "User requests to reduce platform fees or taxes.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "0c976b80-dbd2-41b5-8bd9-d20c198eed64"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_7",
+        "name": "Praise for Trading Tools & UI",
+        "description": "Positive feedback on trading tools and UI elements such as stock price display and Fibonacci features.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "6a227217-e13f-4885-9d29-c7c888b103d3"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_8",
+        "name": "Simple & Easy Interface",
+        "description": "Appreciation for the simple, easy\u2011to\u2011use interface.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "a4b97f75-e1bd-4f47-a690-6975b2d4db07"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_9",
+        "name": "Long\u2011Term User Satisfaction & Usability",
+        "description": "Long\u2011term users highlighting consistent usability and satisfaction over years.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "2550cfad-534a-44cd-a367-e8791e702663"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_10",
+        "name": "Improved Performance Over Time",
+        "description": "Recognition of performance improvements since early adoption.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "eb4b94b9-4c83-44c9-a808-24c229e4a12a"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_11",
+        "name": "Overall Positive Trading Experience",
+        "description": "General praise for the trading experience, including news section and overall app quality.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "efbe6136-7cdc-4628-9be1-32de18bc6ec5"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
