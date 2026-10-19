@@ -1,0 +1,418 @@
+{
+  "run_id": "2340b363-a61e-41b8-beeb-4ef16df91ee3",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-10-12T03:39:39.121743",
+  "period_end": "2026-10-19T03:39:39.121743",
+  "metrics": {
+    "reviews_analyzed": 13,
+    "avg_star_rating": 2.69,
+    "sentiment_distribution": {
+      "positive_count": 6,
+      "neutral_count": 0,
+      "negative_count": 7,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 46.15,
+        "neutral": 0.0,
+        "negative": 53.85,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 10,
+    "emerging_count": 0,
+    "critical_high_count": 4,
+    "rating_distribution": {
+      "1": 7,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 5
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "Security and fraud concerns",
+        "description": "Reviews reporting unauthorized transactions, money loss, or suspicion of fraud within the app.",
+        "review_count": 2,
+        "review_percentage": 15.38,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 2,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "critical",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "1d092a09-8c8f-46be-8cb5-8a7d1282edb4",
+          "8430bcb1-7638-4b76-b579-706a37b78055"
+        ]
+      },
+      "priority": "high",
+      "score": 0.7,
+      "factor_breakdown": {
+        "frequency": 0.07690000000000001,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.25,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_9",
+        "name": "Complaints about high/hidden fees",
+        "description": "Feedback indicating dissatisfaction with service charges, hidden fees, and pricing transparency.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "977ac19c-b8a7-4709-aef3-4c0c059210e9"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_10",
+        "name": "General negative app experience",
+        "description": "Overall negative sentiment toward the app, including poor performance and dissatisfaction with support.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "0199cbbe-87c5-47f0-9863-76e151846448"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "Customer support long wait times",
+        "description": "Complaints about excessive waiting periods and lack of timely response from customer service.",
+        "review_count": 2,
+        "review_percentage": 15.38,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 2,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "760890e8-44d2-4f04-be62-2867ee25f8ef",
+          "40ec369e-799e-4a16-bae9-b33a4aac07ab"
+        ]
+      },
+      "priority": "high",
+      "score": 0.58,
+      "factor_breakdown": {
+        "frequency": 0.07690000000000001,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "KYC onboarding issues",
+        "description": "Problems encountered during identity verification, such as name mismatches and missing support options.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "kyc",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "46b6f473-d50f-4775-9016-84da9a9cea75"
+        ]
+      },
+      "priority": "high",
+      "score": 0.54,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "Positive UI/UX and usability",
+        "description": "Praise for the app\u2019s clean, simple interface and overall ease of use.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "02858390-ec7b-40c6-9ebf-0d39d411cde0"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "Positive trading and broker experience",
+        "description": "Users expressing satisfaction with the trading features and broker reliability.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "e2d668cd-ffea-46ac-982b-808e0ca18974"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_6",
+        "name": "Ease of adding multiple accounts",
+        "description": "App praised for allowing users to add several accounts quickly and conveniently.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "84adf45b-5373-4c32-8160-ef9016e0e702"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_7",
+        "name": "Feature request: customizable stock screener",
+        "description": "User suggestion to add a customizable stock screener section.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "648f4c8a-fabb-4322-9cb0-34597801f443"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_8",
+        "name": "Positive customer support experiences",
+        "description": "Reviews highlighting helpful and responsive customer service.",
+        "review_count": 1,
+        "review_percentage": 7.69,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "49b83783-fa95-4822-8798-fdd48f8504f6"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.038450000000000005,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
