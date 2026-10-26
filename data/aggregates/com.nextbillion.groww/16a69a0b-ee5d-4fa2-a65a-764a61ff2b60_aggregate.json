@@ -1,0 +1,532 @@
+{
+  "run_id": "16a69a0b-ee5d-4fa2-a65a-764a61ff2b60",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-10-19T03:39:51.804121",
+  "period_end": "2026-10-26T03:39:51.804121",
+  "metrics": {
+    "reviews_analyzed": 15,
+    "avg_star_rating": 3.4,
+    "sentiment_distribution": {
+      "positive_count": 8,
+      "neutral_count": 0,
+      "negative_count": 7,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 53.33,
+        "neutral": 0.0,
+        "negative": 46.67,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 13,
+    "emerging_count": 0,
+    "critical_high_count": 4,
+    "rating_distribution": {
+      "1": 6,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 9
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "Import Funds functionality bug",
+        "description": "Users report that the import funds feature fails, showing only OTP and then a blank page.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "account_issues",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "d255d51b-6aae-4675-b747-54465c65c00d"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "Registration/Sign-up failure",
+        "description": "Problems signing up or completing KYC during onboarding, preventing new users from registering.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "login",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "493be4f0-a557-481a-88b0-9d8d1b486c49"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_9",
+        "name": "High fees / profit model complaint",
+        "description": "Negative sentiment about fees and perception that only the platform profits.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "0a934b00-8c9a-4f91-8189-fa1ac170262c"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_10",
+        "name": "App launch failure",
+        "description": "App does not open for days, requiring assistance.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "c65134d2-b20f-4c29-bcc6-0cd7a753fd7b"
+        ]
+      },
+      "priority": "high",
+      "score": 0.6,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "AI/Insights feature not working",
+        "description": "Issues with AI\u2011driven news/fundamental insights not returning results.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading_investing",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "112e6d6c-9aa9-4529-aeee-0069d932f599"
+        ]
+      },
+      "priority": "high",
+      "score": 0.53,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "Missing stock listings in account",
+        "description": "Users cannot see certain stocks in their Groww portfolio.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "a94fca0f-816b-489e-aafb-cefb0b8b0312"
+        ]
+      },
+      "priority": "high",
+      "score": 0.53,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_7",
+        "name": "Withdrawal delay after sell",
+        "description": "Complaints about inability to withdraw proceeds from shares sold until next business day.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading_investing",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "374a0230-145a-48e5-8e4b-f0188611c4e1"
+        ]
+      },
+      "priority": "high",
+      "score": 0.53,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "User-friendly UI/UX praised",
+        "description": "Positive remarks about the app\u2019s simple, intuitive, beginner\u2011friendly interface.",
+        "review_count": 3,
+        "review_percentage": 20.0,
+        "sentiment_distribution": {
+          "positive_count": 3,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "24254262-cad4-4ad6-9812-d1fd4c6fbb72",
+          "c5ee8633-8c55-40a1-886f-72b34e301b86",
+          "ccc1fbba-6903-4767-9345-51a0d377cd9d"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.29,
+      "factor_breakdown": {
+        "frequency": 0.1,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_13",
+        "name": "Advanced trading tools request",
+        "description": "Requests for trailing stop\u2011loss, scalping tools, and fixes to live market call\u2011to\u2011put functionality.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading_investing",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "e8240678-d485-4b8b-a649-35ed89126cb5"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.28,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_6",
+        "name": "Teen/Minor account request",
+        "description": "Requests to allow users under 18, with parental controls, to trade.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "onboarding_kyc",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "355b08a8-4dfb-4e1c-a9c8-84e7c7a46700"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_8",
+        "name": "Transparent pricing praise",
+        "description": "Positive feedback on lack of hidden charges and clear fee structure.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "f05c3a1d-cccc-498f-bb5c-58e0f04a870e"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_11",
+        "name": "SIP feature praise",
+        "description": "Positive comments on SIP (Systematic Investment Plan) functionality.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "mutual_funds",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "a5fb1490-c22c-45e1-b823-19d9cef1d958"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_12",
+        "name": "General trading app praise",
+        "description": "Overall positive remarks about the trading experience and longevity of use.",
+        "review_count": 1,
+        "review_percentage": 6.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "c16a6105-598e-4058-aa74-0f9fa9061fca"
+        ]
+      },
+      "priority": "low",
+      "score": 0.22,
+      "factor_breakdown": {
+        "frequency": 0.03335,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
