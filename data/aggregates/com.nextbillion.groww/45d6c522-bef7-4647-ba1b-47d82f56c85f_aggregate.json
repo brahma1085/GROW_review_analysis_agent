@@ -1,0 +1,343 @@
+{
+  "run_id": "45d6c522-bef7-4647-ba1b-47d82f56c85f",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-11-02T05:02:08.975674",
+  "period_end": "2026-11-09T05:02:08.975674",
+  "metrics": {
+    "reviews_analyzed": 11,
+    "avg_star_rating": 2.09,
+    "sentiment_distribution": {
+      "positive_count": 1,
+      "neutral_count": 2,
+      "negative_count": 8,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 9.09,
+        "neutral": 18.18,
+        "negative": 72.73,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 8,
+    "emerging_count": 0,
+    "critical_high_count": 6,
+    "rating_distribution": {
+      "1": 7,
+      "2": 0,
+      "3": 2,
+      "4": 0,
+      "5": 2
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "Funding/Deposit delays and poor support",
+        "description": "Multiple users report money not being credited after deposits or conversions, experience long waiting times, and receive little or no response from customer support.",
+        "review_count": 3,
+        "review_percentage": 27.27,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 3,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "critical",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "3742aaef-fe62-4d91-9a74-eac80b50c378",
+          "ff59fb8c-5d46-45f4-9711-133d04391549",
+          "0a6f1460-deef-4396-8114-cf66ae60aa26"
+        ]
+      },
+      "priority": "critical",
+      "score": 0.76,
+      "factor_breakdown": {
+        "frequency": 0.13635,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.25,
+        "growth": 0.125
+      },
+      "rationale": "Critical priority driven primarily by high negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_8",
+        "name": "App performance and stability issues",
+        "description": "Reports of the app hanging, becoming unresponsive, unexpected log\u2011outs, and trade execution problems under load.",
+        "review_count": 2,
+        "review_percentage": 18.18,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 2,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "b15d5a70-3153-4f89-a381-38836f98a508",
+          "16a36a54-5b73-4d02-aaa1-84d4de20d4e9"
+        ]
+      },
+      "priority": "high",
+      "score": 0.65,
+      "factor_breakdown": {
+        "frequency": 0.0909,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "Incorrect market data and alerts",
+        "description": "Issues where the app shows wrong stock listings, miscalculates portfolio values, or sends incomplete IPO email alerts.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "37255673-ca27-416f-9ef3-bffacfccfb50"
+        ]
+      },
+      "priority": "high",
+      "score": 0.61,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "Device compatibility problems",
+        "description": "The app fails to run on certain Android devices, with users reporting unsupported phone models.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "c347bb4b-72da-417b-88eb-90cfd7788739"
+        ]
+      },
+      "priority": "high",
+      "score": 0.55,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "High fees and pricing complaints",
+        "description": "Users express dissatisfaction with the cost structure, calling fees \"too high\" and asking for reductions.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "bb79c895-2bf3-4820-bcfa-fd5912144b11"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.48,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "Delayed chart and market data updates",
+        "description": "Users notice that charts are lagging behind real\u2011time market movements.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "8c03dca6-5cab-453d-85fd-f1aca40088e1"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_6",
+        "name": "Feature request: support for new exchange/commodity (NSE Gold EGR)",
+        "description": "A user requests the addition of the NSE Gold Exchange\u2011Traded Commodity to the platform.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 1,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 100.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "cbdb2c4b-3d44-495e-8c7c-145c0abe772b"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    },
+    {
+      "theme": {
+        "id": "theme_7",
+        "name": "Positive feedback on UI/UX and usability",
+        "description": "Praise for the app\u2019s ease of use and clean user interface.",
+        "review_count": 1,
+        "review_percentage": 9.09,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "304d609f-2dda-4a07-b184-86832850fd60"
+        ]
+      },
+      "priority": "low",
+      "score": 0.23,
+      "factor_breakdown": {
+        "frequency": 0.04545,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
