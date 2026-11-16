@@ -1,0 +1,305 @@
+{
+  "run_id": "fbc85d22-b561-4bc8-94de-f95e52e3bfe1",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-11-09T05:15:16.786594",
+  "period_end": "2026-11-16T05:15:16.786594",
+  "metrics": {
+    "reviews_analyzed": 10,
+    "avg_star_rating": 1.6,
+    "sentiment_distribution": {
+      "positive_count": 1,
+      "neutral_count": 0,
+      "negative_count": 9,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 10.0,
+        "neutral": 0.0,
+        "negative": 90.0,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 7,
+    "emerging_count": 0,
+    "critical_high_count": 4,
+    "rating_distribution": {
+      "1": 7,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 0
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_6",
+        "name": "Brokerage Fees & Charges",
+        "description": "Multiple users highlighting high brokerage costs, fee structures, and related dissatisfaction.",
+        "review_count": 3,
+        "review_percentage": 30.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 3,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "aa4e4db0-57bb-4b15-99bc-891ab8fcc3dd",
+          "98530a08-d757-4c62-8007-0b81ffa70249",
+          "d07d8c9e-2022-4f68-b5e5-4e8557943506"
+        ]
+      },
+      "priority": "high",
+      "score": 0.71,
+      "factor_breakdown": {
+        "frequency": 0.15,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "Customer Support & Account Management",
+        "description": "Negative experiences with customer care, inability to edit account data, and unexpected charges such as auto\u2011pay penalties.",
+        "review_count": 2,
+        "review_percentage": 20.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 2,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "mutual_funds",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "f82a9025-5dcc-4b5b-99ee-50fc08fcd487",
+          "472cfaf9-710b-4627-8c9c-43274d56b771"
+        ]
+      },
+      "priority": "high",
+      "score": 0.66,
+      "factor_breakdown": {
+        "frequency": 0.1,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "Login Issues",
+        "description": "Users reporting problems logging into the app or authentication failures.",
+        "review_count": 1,
+        "review_percentage": 10.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "login",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "e77dae9c-ea35-4010-9fe8-6edc7fbc1ee8"
+        ]
+      },
+      "priority": "high",
+      "score": 0.61,
+      "factor_breakdown": {
+        "frequency": 0.05,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_7",
+        "name": "Security & Privacy Concerns",
+        "description": "Reports of personal data being sold, spam calls, and other privacy or security related issues.",
+        "review_count": 1,
+        "review_percentage": 10.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "security",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "f7077b94-6925-469b-b60c-d70ad9741c36"
+        ]
+      },
+      "priority": "high",
+      "score": 0.61,
+      "factor_breakdown": {
+        "frequency": 0.05,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "Withdrawal & Account Access Issues",
+        "description": "Complaints about withdrawal delays, inability to withdraw funds, and account bans or restrictions.",
+        "review_count": 1,
+        "review_percentage": 10.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "41c4360a-aef8-4cec-b30e-c335f814934a"
+        ]
+      },
+      "priority": "high",
+      "score": 0.55,
+      "factor_breakdown": {
+        "frequency": 0.05,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "SIP Flexibility Limitations",
+        "description": "Requests to pause or modify SIP (Systematic Investment Plan) for custom periods beyond the current one\u2011month maximum.",
+        "review_count": 1,
+        "review_percentage": 10.0,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "mutual_funds",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "ca7866a4-4b1c-4c35-a12f-3edaac7cddfd"
+        ]
+      },
+      "priority": "high",
+      "score": 0.55,
+      "factor_breakdown": {
+        "frequency": 0.05,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "Positive Brand Praise",
+        "description": "Expressions of satisfaction and positive sentiment about the platform\u2019s growth and overall experience.",
+        "review_count": 1,
+        "review_percentage": 10.0,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "ccdc3272-fd9d-41e3-8b37-cde00819ad8e"
+        ]
+      },
+      "priority": "low",
+      "score": 0.24,
+      "factor_breakdown": {
+        "frequency": 0.05,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Low priority. Routine issue."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
