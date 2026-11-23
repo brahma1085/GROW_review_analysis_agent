@@ -1,0 +1,227 @@
+{
+  "run_id": "f6323565-f959-4049-858b-534377f8b049",
+  "app_id": "com.nextbillion.groww",
+  "period_start": "2026-11-16T06:14:33.275792",
+  "period_end": "2026-11-23T06:14:33.275792",
+  "metrics": {
+    "reviews_analyzed": 6,
+    "avg_star_rating": 3.5,
+    "sentiment_distribution": {
+      "positive_count": 4,
+      "neutral_count": 0,
+      "negative_count": 2,
+      "mixed_count": 0,
+      "percentages": {
+        "positive": 66.67,
+        "neutral": 0.0,
+        "negative": 33.33,
+        "mixed": 0.0
+      }
+    },
+    "theme_count": 5,
+    "emerging_count": 0,
+    "critical_high_count": 1,
+    "rating_distribution": {
+      "1": 2,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 3
+    }
+  },
+  "themes": [
+    {
+      "theme": {
+        "id": "theme_5",
+        "name": "Account Reactivation & Holding Issues",
+        "description": "Complaints about difficulty re\u2011activating accounts, lack of support response, and holdings becoming stuck.",
+        "review_count": 1,
+        "review_percentage": 16.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "other",
+        "severity": "high",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "9b9ae99e-9d1b-4e86-b38a-7f4ac0734ea9"
+        ]
+      },
+      "priority": "high",
+      "score": 0.65,
+      "factor_breakdown": {
+        "frequency": 0.08335000000000001,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.1875,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_1",
+        "name": "Stop Loss & Target Order Functionality",
+        "description": "Issues where stop\u2011loss and target orders are not applied together and users request an update to this trading feature.",
+        "review_count": 1,
+        "review_percentage": 16.67,
+        "sentiment_distribution": {
+          "positive_count": 0,
+          "neutral_count": 0,
+          "negative_count": 1,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 0.0,
+            "neutral": 0.0,
+            "negative": 100.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "medium",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "5a53cb41-b659-47d4-bb46-cfaa75bd1ccd"
+        ]
+      },
+      "priority": "high",
+      "score": 0.58,
+      "factor_breakdown": {
+        "frequency": 0.08335000000000001,
+        "negative_sentiment": 0.25,
+        "severity_language": 0.125,
+        "growth": 0.125
+      },
+      "rationale": "High priority due to negative sentiment."
+    },
+    {
+      "theme": {
+        "id": "theme_2",
+        "name": "Positive Overall App Experience",
+        "description": "General praise indicating the app is highly regarded, easy to use, and considered one of the best options for trading.",
+        "review_count": 2,
+        "review_percentage": 33.33,
+        "sentiment_distribution": {
+          "positive_count": 2,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "236532a1-568a-4bf2-9c79-ef5b8ccd039e",
+          "f1e6d5be-f337-4073-a156-2fb458b25cdf"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.35,
+      "factor_breakdown": {
+        "frequency": 0.16665,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_3",
+        "name": "Charting UI Enhancements",
+        "description": "Feature requests for improving charting UI, such as adding a dual chart view and editing chandelier exit indicators within the trading view.",
+        "review_count": 1,
+        "review_percentage": 16.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "trading",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "083cdc62-98e3-44c8-b056-afc28864bd21"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.27,
+      "factor_breakdown": {
+        "frequency": 0.08335000000000001,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    },
+    {
+      "theme": {
+        "id": "theme_4",
+        "name": "PCR Ratio Indicator Updates",
+        "description": "Requests to update and display the PCR (Put\u2011Call Ratio) at specific strike levels and enable simultaneous use of the ratio in analysis.",
+        "review_count": 1,
+        "review_percentage": 16.67,
+        "sentiment_distribution": {
+          "positive_count": 1,
+          "neutral_count": 0,
+          "negative_count": 0,
+          "mixed_count": 0,
+          "percentages": {
+            "positive": 100.0,
+            "neutral": 0.0,
+            "negative": 0.0,
+            "mixed": 0.0
+          }
+        },
+        "product_area": "stocks",
+        "severity": "low",
+        "is_recurring": false,
+        "is_emerging": false,
+        "recommended_action": null,
+        "review_ids": [
+          "e35caad8-3960-4cd8-88c9-47decb5514ad"
+        ]
+      },
+      "priority": "medium",
+      "score": 0.27,
+      "factor_breakdown": {
+        "frequency": 0.08335000000000001,
+        "negative_sentiment": 0.0,
+        "severity_language": 0.0625,
+        "growth": 0.125
+      },
+      "rationale": "Medium priority. Needs monitoring."
+    }
+  ],
+  "doc_url": null,
+  "gmail_status": "failed"
+}
